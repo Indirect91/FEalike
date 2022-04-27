@@ -1522,9 +1522,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 0}
   titleUICG: {fileID: 0}
-  titleBGM: {fileID: 0}
-  titlePickSFX: {fileID: 0}
-  titleSelectSFX: {fileID: 0}
+  titleAudio: {fileID: 0}
+  titleBGM: {fileID: 8300000, guid: 040c67665e64b9e4da3d1fad90e165d1, type: 3}
+  titlePickSFX: {fileID: 8300000, guid: 2f3d799d771129044adb55c80ab71ad4, type: 3}
+  titleSelectSFX: {fileID: 8300000, guid: 71810a04d0d51d341a3b636f022f15ac, type: 3}
 --- !u!4 &1856973311
 Transform:
   m_ObjectHideFlags: 0
@@ -1549,7 +1550,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 040c67665e64b9e4da3d1fad90e165d1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
