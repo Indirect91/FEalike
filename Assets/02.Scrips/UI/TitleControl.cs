@@ -15,13 +15,19 @@ public class TitleControl : MonoBehaviour
     private IEnumerator rotationCr; //모든 버튼 알파값변경 싱크 맞추기 위한 코루틴
 
 
-
     //▼타이틀 화면 디자인 디테일 조정용
     public CanvasGroup titleUICG; //UI 버튼+타이틀 일괄 조정용
     private Image titleBackground; //타이틀 독립적 알파값 조정대상
     private Color titleBackgroundColor; //타이틀 알파값
 
     private WaitForSeconds waitTime; //기다리는 시간 여러번 할당 안하게 변수로 뺌
+
+    //▼사운드 컨트롤
+    public AudioSource titleAudio;
+    public AudioClip titleBGM;
+    public AudioClip titlePickSFX;
+    public AudioClip titleSelectSFX;
+    
 
     bool isReady = false; //모든 UI 코루틴이 끝난 후 버튼 선택 가능
 
@@ -31,6 +37,7 @@ public class TitleControl : MonoBehaviour
         titleBackground = GameObject.Find("TitleBackground").GetComponent<Image>();
         titleUICG = GameObject.Find("TitlePanel").GetComponent<CanvasGroup>();
         buttonColor = GameObject.Find("New Game Btn").GetComponent<Image>().color;
+        titleAudio = GetComponent<AudioSource>();
         eventSystem = EventSystem.current;
         
 
@@ -52,6 +59,7 @@ public class TitleControl : MonoBehaviour
     {
         StopCoroutine(rotationCr);
         StartCoroutine(flickerButton());
+        titleAudio.PlayOneShot(titleSelectSFX, 1.0f);
         
     }
 
