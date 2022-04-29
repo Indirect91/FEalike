@@ -2,7 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
+
+enum SceneStatus
+{
+    Fadein, Fadeout, FadeoutDone, None
+}
 
 public class TitleControl : MonoBehaviour
 {
@@ -16,11 +22,13 @@ public class TitleControl : MonoBehaviour
 
 
     //▼타이틀 화면 디자인 디테일 조정용
-    public CanvasGroup titleUICG; //UI 버튼+타이틀 일괄 조정용
+    private CanvasGroup titleUICG; //UI 버튼+타이틀 일괄 조정용
     private Image titleBackground; //타이틀 독립적 알파값 조정대상
     private Color titleBackgroundColor; //타이틀 알파값
-
+    private CanvasGroup titleEndCG;
     private WaitForSeconds waitTime; //기다리는 시간 여러번 할당 안하게 변수로 뺌
+    SceneStatus sceneStatus = SceneStatus.Fadein;
+    string selectedName = "";
 
     //▼사운드 컨트롤
     public AudioSource titleAudio;
@@ -29,21 +37,21 @@ public class TitleControl : MonoBehaviour
     public AudioClip titleSelectSFX;
     
 
-    bool isReady = false; //모든 UI 코루틴이 끝난 후 버튼 선택 가능
 
     void Start()
     {
         //▼초기 연결
         titleBackground = GameObject.Find("TitleBackground").GetComponent<Image>();
         titleUICG = GameObject.Find("TitlePanel").GetComponent<CanvasGroup>();
-        buttonColor = GameObject.Find("New Game Btn").GetComponent<Image>().color;
+        titleEndCG = GameObject.Find("PlainBlack").GetComponent<CanvasGroup>();
+        buttonColor = GameObject.Find("NewGame").GetComponent<Image>().color;
         titleAudio = GetComponent<AudioSource>();
         eventSystem = EventSystem.current;
         
 
         //▼초기값 세팅
         titleBackgroundColor = titleBackground.color;
-        isReady = false;
+        
         isSelectInitiated = false;
         titleUICG.alpha = 0.0f;
         titleBackgroundColor.a = 0.0f;
@@ -57,12 +65,59 @@ public class TitleControl : MonoBehaviour
 
     public void buttonSelectedReaction()
     {
-        StopCoroutine(rotationCr);
-        StartCoroutine(flickerButton());
-        titleAudio.PlayOneShot(titleSelectSFX, 1.0f);
+        if (sceneStatus == SceneStatus.None)
+        {
+            selectedName = eventSystem.currentSelectedGameObject.name;
+            StopCoroutine(rotationCr);
+            StartCoroutine(flickerButton());
+        }
+    }
+
+    public void playPickSound()
+    {
+        if(sceneStatus == SceneStatus.None)
+        titleAudio.PlayOneShot(titlePickSFX, 1.0f); 
         
     }
 
+    public void playSelectSound()
+    {
+        if (sceneStatus == SceneStatus.None)
+        {
+            titleAudio.PlayOneShot(titleSelectSFX, 1.0f);
+        }
+    }
+
+     void selectProcess()
+    {
+        switch(selectedName)
+        {
+            case "NewGame":
+                Debug.Log("뉴겜");
+                break;
+            case "Continue":
+                Debug.Log("컨티뉴");
+                break;
+            case "Credit":
+                Debug.Log("크레딧");
+                break;
+            default:
+                Debug.Assert(true);
+                break;
+        }
+    }
+
+    IEnumerator allFadeOut()
+    {
+        titleEndCG.alpha = 0.0f;
+        titleEndCG.transform.SetAsLastSibling();
+        while (titleEndCG.alpha < 1)
+        {
+            titleEndCG.alpha += 0.02f;
+            yield return waitTime;
+        }
+        sceneStatus = SceneStatus.FadeoutDone;
+    }
     IEnumerator flickerButton()
     {
         float timeProgress = 0.0f;
@@ -81,7 +136,7 @@ public class TitleControl : MonoBehaviour
 
             yield return new WaitForSeconds(0.15f);
         }
-
+        StartCoroutine(allFadeOut());
     }
 
     IEnumerator buttonAlphaRotation()
@@ -135,24 +190,11 @@ public class TitleControl : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //buttonColor.a = buttonAlpha;
-        //EventSystem.current.firstSelectedGameObject.GetComponent<Image>().color = buttonColor;
-
-
-
-        if (isReady)
-        {
-            Debug.Log("reday");
-            isReady = false;
-            var interactInit = GameObject.Find("TitlePanel").GetComponentsInChildren<CanvasGroup>();
-            foreach(var each in interactInit)
-            {
-                each.interactable = true;
-                Debug.Log(each.name +" :"+ each.interactable );
-            }
+        if(sceneStatus == SceneStatus.FadeoutDone)
+        { 
+            selectProcess();
         }
     }
 
@@ -177,16 +219,13 @@ public class TitleControl : MonoBehaviour
             titleUICG.alpha += 0.02f;
             yield return waitTime;
         }
-        isReady = true;
-    }
 
-    IEnumerator SelectFade()
-    {
-        while (titleUICG.alpha < 1)
+        var interactInit = GameObject.Find("TitlePanel").GetComponentsInChildren<CanvasGroup>();
+        foreach (var each in interactInit)
         {
-            titleUICG.alpha += 0.02f;
-            yield return waitTime;
+            each.interactable = true;
         }
-        isReady = true;
+        sceneStatus = SceneStatus.None;
+
     }
 }
