@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 enum SceneStatus
 {
@@ -58,11 +59,12 @@ public class TitleControl : MonoBehaviour
 
         waitTime = new WaitForSeconds(0.01f);
         StartCoroutine(BackgroundFadein());
-        rotationCr =  buttonAlphaRotation();
+        rotationCr =  buttonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
         StartCoroutine(rotationCr);
         
     }
 
+    //▼
     public void buttonSelectedReaction()
     {
         if (sceneStatus == SceneStatus.None)
@@ -93,13 +95,15 @@ public class TitleControl : MonoBehaviour
         switch(selectedName)
         {
             case "NewGame":
+                SceneManager.LoadScene("");
                 Debug.Log("뉴겜");
                 break;
             case "Continue":
+                SceneManager.LoadScene("");
                 Debug.Log("컨티뉴");
                 break;
             case "Credit":
-                Debug.Log("크레딧");
+                SceneManager.LoadScene("Credit");
                 break;
             default:
                 Debug.Assert(true);
@@ -109,10 +113,12 @@ public class TitleControl : MonoBehaviour
 
     IEnumerator allFadeOut()
     {
+        titleAudio.volume = 1.0f;
         titleEndCG.alpha = 0.0f;
         titleEndCG.transform.SetAsLastSibling();
         while (titleEndCG.alpha < 1)
         {
+            titleAudio.volume -= 0.02f;
             titleEndCG.alpha += 0.02f;
             yield return waitTime;
         }
