@@ -95,11 +95,10 @@ public class TitleControl : MonoBehaviour
         switch(selectedName)
         {
             case "NewGame":
-                SceneManager.LoadScene("");
-                Debug.Log("´º°×");
+                SceneManager.LoadScene("NewGameScene");
                 break;
             case "Continue":
-                SceneManager.LoadScene("");
+                //SceneManager.LoadScene("");
                 Debug.Log("ÄÁÆ¼´º");
                 break;
             case "Credit":
