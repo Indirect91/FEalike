@@ -8,5 +8,8 @@ using UnityEngine;
 public class GameDataSO : ScriptableObject
 {
     public bool isSavefileExists = false;
+    public int stageProgress = 0;
+    public List<Playable> playerTeam = new List<Playable>();
 
+    public string playerName = "";
 }

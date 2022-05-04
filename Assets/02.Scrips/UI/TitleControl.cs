@@ -108,8 +108,8 @@ public class TitleControl : MonoBehaviour
                 SceneManager.LoadScene("NewGameScene");
                 break;
             case "Continue":
-                //SceneManager.LoadScene("");
-                Debug.Log("ÄÁÆ¼´º");
+               // SceneManager.LoadScene("Stage"+GameManager.instance.gameData.stageProgress);
+                Debug.Log("Stage" + GameManager.instance.gameData.stageProgress);
                 break;
             case "Credit":
                 SceneManager.LoadScene("Credit");
@@ -157,7 +157,6 @@ public class TitleControl : MonoBehaviour
     IEnumerator buttonAlphaRotation()
     {
         var prevSelected = eventSystem.currentSelectedGameObject;
-        Debug.Log(prevSelected);
         while (true)
         {
             if (!isSelectInitiated&& prevSelected != eventSystem.currentSelectedGameObject)

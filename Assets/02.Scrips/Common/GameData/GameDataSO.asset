@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GameDataSO
   m_EditorClassIdentifier: 
   isSavefileExists: 0
+  stageProgress: 0
+  playerTeam: []
