@@ -32,10 +32,10 @@ public class TitleControl : MonoBehaviour
     string selectedName = "";
 
     //▼사운드 컨트롤
-    private AudioSource titleAudio;
+    private AudioSource audioSource;
     public AudioClip titleBGM;
-    public AudioClip titlePickSFX;
-    public AudioClip titleSelectSFX;
+    //public AudioClip titlePickSFX;
+    //public AudioClip titleSelectSFX;
     
 
 
@@ -46,7 +46,7 @@ public class TitleControl : MonoBehaviour
         titleUICG = GameObject.Find("TitlePanel").GetComponent<CanvasGroup>();
         titleEndCG = GameObject.Find("PlainBlack").GetComponent<CanvasGroup>();
         buttonColor = GameObject.Find("NewGame").GetComponent<Image>().color;
-        titleAudio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         eventSystem = EventSystem.current;
         
 
@@ -88,7 +88,7 @@ public class TitleControl : MonoBehaviour
     public void playPickSound()
     {
         if(sceneStatus == SceneStatus.None)
-        titleAudio.PlayOneShot(titlePickSFX, 1.0f); 
+        audioSource.PlayOneShot(GameManager.instance.UISfx.pickSFX, 1.0f); 
         
     }
 
@@ -96,7 +96,7 @@ public class TitleControl : MonoBehaviour
     {
         if (sceneStatus == SceneStatus.None)
         {
-            titleAudio.PlayOneShot(titleSelectSFX, 1.0f);
+            audioSource.PlayOneShot(GameManager.instance.UISfx.selectSFX, 1.0f);
         }
     }
 
@@ -122,12 +122,12 @@ public class TitleControl : MonoBehaviour
 
     IEnumerator allFadeOut()
     {
-        titleAudio.volume = 1.0f;
+        audioSource.volume = 1.0f;
         titleEndCG.alpha = 0.0f;
         titleEndCG.transform.SetAsLastSibling();
         while (titleEndCG.alpha < 1)
         {
-            titleAudio.volume -= 0.02f;
+            audioSource.volume -= 0.02f;
             titleEndCG.alpha += 0.02f;
             yield return waitTime;
         }

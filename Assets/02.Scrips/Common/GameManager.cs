@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[System.Serializable]
+public class UISFXCollection
+{
+    public AudioClip pickSFX;
+    public AudioClip selectSFX;
+    public AudioClip cancelSFX;
+    public AudioClip chooseSFX;
+    public AudioClip uiPopupSFX;
+}
+
+
 public class GameManager : MonoBehaviour
 {
-    public delegate void YesNoInputHandler();
-    public static event YesNoInputHandler OnYesNoSelection;
-
-
     public enum CurrentPhase
     {
         newGame,talk, travel, search, battle
     }
 
-   
+    public UISFXCollection UISfx;
     public static GameManager instance = null;
     public GameDataSO gameData;
     public bool yesNoInput = false;
@@ -35,7 +42,7 @@ public class GameManager : MonoBehaviour
 
         yesNoInput = false;
 }
-    void DeleteSavedata()
+    public void DeleteSavedata()
     {
         gameData.isSavefileExists = false;
         gameData.stageProgress = 0;
