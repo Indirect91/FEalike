@@ -14,7 +14,7 @@ enum SceneStatus
 public class TitleControl : MonoBehaviour
 {
     //▼버튼 컨트롤 디자인용
-    public EventSystem eventSystem;
+    private EventSystem eventSystem;
     private Color buttonColor;
     private float buttonAlpha = 0.0f;
     private bool isAlphaPeak = false; 
@@ -32,7 +32,7 @@ public class TitleControl : MonoBehaviour
     string selectedName = "";
 
     //▼사운드 컨트롤
-    public AudioSource titleAudio;
+    private AudioSource titleAudio;
     public AudioClip titleBGM;
     public AudioClip titlePickSFX;
     public AudioClip titleSelectSFX;
@@ -62,6 +62,16 @@ public class TitleControl : MonoBehaviour
         rotationCr =  buttonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
         StartCoroutine(rotationCr);
         
+        if(GameManager.instance.gameData.isSavefileExists==false)
+        {
+
+            var toGrayout = GameObject.Find("Continue").GetComponentInChildren<Text>();
+            Color grayColor = toGrayout.color;
+            grayColor.r /= 2;
+            grayColor.g /= 2;
+            grayColor.b /= 2;
+            toGrayout.color = grayColor;
+        }
     }
 
     //▼
@@ -228,7 +238,14 @@ public class TitleControl : MonoBehaviour
         var interactInit = GameObject.Find("TitlePanel").GetComponentsInChildren<CanvasGroup>();
         foreach (var each in interactInit)
         {
-            each.interactable = true;
+            if (each.name == "Continue" && GameManager.instance.gameData.isSavefileExists == false)
+            {
+                continue;
+            }
+            else
+            { 
+                each.interactable = true; 
+            }
         }
         sceneStatus = SceneStatus.None;
 
