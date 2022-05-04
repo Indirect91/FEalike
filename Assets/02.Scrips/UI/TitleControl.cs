@@ -190,7 +190,6 @@ public class TitleControl : MonoBehaviour
 
             if(isSelectInitiated && (prevSelected != eventSystem.currentSelectedGameObject))
             {
-                Debug.Log(prevSelected);
                 var tempColor = prevSelected.GetComponent<Image>().color;
                 tempColor.a = 0;
                 prevSelected.GetComponent<Image>().color = tempColor;

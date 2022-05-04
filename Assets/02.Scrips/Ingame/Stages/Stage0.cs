@@ -12,7 +12,7 @@ public class Stage0 : MonoBehaviour
     //▼스테이지0에서만 사용할 열거형
     private enum Stage0Phase
     {
-        IntroPhase, AskName, UserYesNoStandby, SceneChanging,None
+        IntroPhase, AskNamePhase, UserYesNoStandby, SceneChanging,None
     }
 
     private AudioSource audioSource;
@@ -22,6 +22,11 @@ public class Stage0 : MonoBehaviour
 
     private Stage0Phase stage0curPhase = Stage0Phase.IntroPhase;
     private Stage0Phase stage0prevPhase = Stage0Phase.None;
+    private Dictionary<string, GameObject> phasePanels;
+    public GameObject introPhase;
+    public GameObject askNamePhase;
+    
+
 
     //▼UI 이벤트용
     private EventSystem eventSystem;
@@ -37,11 +42,18 @@ public class Stage0 : MonoBehaviour
         // GameManager.instance.currentPhase = GameManager.CurrentPhase.newGame;
         audioSource = GetComponent<AudioSource>();
         plainBlack = GameObject.Find("PlainBlack").GetComponent<CanvasGroup>();
+        plainBlack.alpha = 1.0f;
+        phasePanels = new Dictionary<string, GameObject>();
+        phasePanels.Add("IntroPhase", introPhase);
+        phasePanels.Add("AskNamePhase",askNamePhase);
+
         eventSystem = EventSystem.current;
-        stage0curPhase = Stage0Phase.IntroPhase;
+        stage0curPhase = Stage0Phase.SceneChanging;
         introVideo.loopPointReached += VideoEndCheck; //비디오 종료 확인용
         isVideoEnded = false;
         inputStream = "";
+
+        StartCoroutine(FadeIn(Stage0Phase.IntroPhase));
     }
 
     //▼팝업 UI 버튼에 연결시킬 함수
@@ -79,6 +91,7 @@ public class Stage0 : MonoBehaviour
     //▼페이드 아웃 후 전환할 씬을 인자로 받는 코루틴
     IEnumerator AllfadeOut(Stage0Phase nextPhase)
     {
+        var toClose = stage0curPhase;
         stage0curPhase = Stage0Phase.SceneChanging;
         while(plainBlack.alpha<1)
         {
@@ -86,7 +99,21 @@ public class Stage0 : MonoBehaviour
 
             yield return new WaitForSeconds(0.01f) ;
         }
-        stage0curPhase = nextPhase; //페이드아웃이 끝난 후 전환
+        GameObject.Find(toClose.ToString()).SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(FadeIn(nextPhase));
+    }
+
+    IEnumerator FadeIn(Stage0Phase nextPhase)
+    {
+        phasePanels[nextPhase.ToString()].SetActive(true);
+        while (plainBlack.alpha > 0)
+        {
+            plainBlack.alpha -= 0.02f;
+
+            yield return new WaitForSeconds(0.01f);
+        }
+        stage0curPhase = nextPhase;
     }
 
 
@@ -108,7 +135,7 @@ public class Stage0 : MonoBehaviour
                     {
                         audioSource.PlayOneShot(GameManager.instance.UISfx.pickSFX);
                         inputStream = "";
-                        StartCoroutine(AllfadeOut(Stage0Phase.AskName));
+                        StartCoroutine(AllfadeOut(Stage0Phase.AskNamePhase));
                     }
                 else if(inputStream =="NoBtn")
                     {
@@ -119,8 +146,8 @@ public class Stage0 : MonoBehaviour
                     }
                 else if(isVideoEnded==true)
                     {
-                        StartCoroutine(AllfadeOut(Stage0Phase.AskName));
-                        stage0curPhase = Stage0Phase.AskName;
+                        StartCoroutine(AllfadeOut(Stage0Phase.AskNamePhase));
+                        stage0curPhase = Stage0Phase.AskNamePhase;
                         
                     }
             }
@@ -138,7 +165,12 @@ public class Stage0 : MonoBehaviour
                     eventSystem.SetSelectedGameObject(prevSelected);
                 }
                 break;
+
+            //▼화면 전환 사이엔 입력을 막아둠
             case Stage0Phase.SceneChanging:
+                break;
+            case Stage0Phase.AskNamePhase:
+
                 break;
             default:
                 Debug.Log(stage0curPhase);

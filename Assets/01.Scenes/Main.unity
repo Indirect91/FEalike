@@ -1588,6 +1588,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8175e024e3327b4a9f0e08c7b918006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UISfx:
+    pickSFX: {fileID: 8300000, guid: 2f3d799d771129044adb55c80ab71ad4, type: 3}
+    selectSFX: {fileID: 8300000, guid: 71810a04d0d51d341a3b636f022f15ac, type: 3}
+    cancelSFX: {fileID: 8300000, guid: c988ed2fb1f7e124a9226619b228a0fe, type: 3}
+    chooseSFX: {fileID: 8300000, guid: 7d7fc141647cb5842aaeeb6fcdabfc46, type: 3}
+    uiPopupSFX: {fileID: 8300000, guid: e9c7bddf72101a743aeca2040b300bdc, type: 3}
   gameData: {fileID: 11400000, guid: 47cebdfa22e815d46a46bc89ee0fb389, type: 2}
   yesNoInput: 0
   currentPhase: 0
@@ -1636,8 +1642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleBGM: {fileID: 8300000, guid: 040c67665e64b9e4da3d1fad90e165d1, type: 3}
-  titlePickSFX: {fileID: 8300000, guid: 2f3d799d771129044adb55c80ab71ad4, type: 3}
-  titleSelectSFX: {fileID: 8300000, guid: 71810a04d0d51d341a3b636f022f15ac, type: 3}
 --- !u!4 &1856973311
 Transform:
   m_ObjectHideFlags: 0
