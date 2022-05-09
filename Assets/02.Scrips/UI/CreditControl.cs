@@ -8,17 +8,18 @@ public class CreditControl : MonoBehaviour
 {
     private RectTransform creditScrollTr;
     private bool isReached = false;
-    public float moveSpeed = 1.0f;
+    public float moveSpeed = 2.0f;
     private bool isReady = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        moveSpeed = 1.0f;
+        moveSpeed = 2.0f;
         isReached = false;
         isReady = false;
         creditScrollTr = GameObject.Find("Credit").GetComponent<RectTransform>();
+        
         StartCoroutine(ScrollCr());
     }
 
@@ -28,7 +29,7 @@ public class CreditControl : MonoBehaviour
         {
             creditScrollTr.Translate(Vector3.up * moveSpeed);
             
-            if (creditScrollTr.transform.position.y > 500)
+            if (creditScrollTr.transform.position.y > Screen.height/2)
             {
                 isReached = true;
             }
@@ -74,11 +75,11 @@ public class CreditControl : MonoBehaviour
         else if(!isReady && Input.anyKey)
         {
             
-            moveSpeed = 2.0f;
+            moveSpeed = 4.0f;
         }
         else
         {
-            moveSpeed = 1.0f;
+            moveSpeed = 2.0f;
         }
     }
 }
