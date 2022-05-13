@@ -171,6 +171,7 @@ public class Stage0 : MonoBehaviour
                 break;
             case Stage0Phase.AskNamePhase:
 
+
                 break;
             default:
                 Debug.Log(stage0curPhase);

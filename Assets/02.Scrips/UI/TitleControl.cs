@@ -33,10 +33,13 @@ public class TitleControl : MonoBehaviour
 
     //▼사운드 컨트롤
     private AudioSource audioSource;
-    public AudioClip titleBGM;
+    //public AudioClip titleBGM;
     //public AudioClip titlePickSFX;
     //public AudioClip titleSelectSFX;
     
+    public delegate IEnumerator FadeHandler();
+    public static event FadeHandler OnFadeIn;
+    public static event FadeHandler OnFadeOut;
 
 
     void Start()
@@ -48,7 +51,7 @@ public class TitleControl : MonoBehaviour
         buttonColor = GameObject.Find("NewGame").GetComponent<Image>().color;
         audioSource = GetComponent<AudioSource>();
         eventSystem = EventSystem.current;
-        
+
 
         //▼초기값 세팅
         titleBackgroundColor = titleBackground.color;
@@ -72,6 +75,8 @@ public class TitleControl : MonoBehaviour
             grayColor.b /= 2;
             toGrayout.color = grayColor;
         }
+        GameManager.instance.BGMPlayer.clip = GameManager.instance.Bgm.titleBGM;
+        GameManager.instance.BGMPlayer.Play();
     }
 
     //▼
@@ -122,12 +127,14 @@ public class TitleControl : MonoBehaviour
 
     IEnumerator allFadeOut()
     {
-        audioSource.volume = 1.0f;
+        audioSource.volume = 1.0f; 
         titleEndCG.alpha = 0.0f;
         titleEndCG.transform.SetAsLastSibling();
         while (titleEndCG.alpha < 1)
         {
-            audioSource.volume -= 0.02f;
+
+            audioSource.volume -= 0.02f; 
+
             titleEndCG.alpha += 0.02f;
             yield return waitTime;
         }

@@ -13,6 +13,12 @@ public class UISFXCollection
     public AudioClip uiPopupSFX;
 }
 
+[System.Serializable]
+public class BGMCollection
+{
+    public AudioClip titleBGM;
+    public AudioClip talkBGM;
+}
 
 public class GameManager : MonoBehaviour
 {
@@ -20,11 +26,13 @@ public class GameManager : MonoBehaviour
     {
         newGame,talk, travel, search, battle
     }
-
     public UISFXCollection UISfx;
+    public BGMCollection Bgm;
+
     public static GameManager instance = null;
     public GameDataSO gameData;
-    public bool yesNoInput = false;
+    //public bool yesNoInput = false;
+    public AudioSource BGMPlayer;
 
     public CurrentPhase currentPhase;
 
@@ -40,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        yesNoInput = false;
+        //yesNoInput = false;
 }
     public void DeleteSavedata()
     {
@@ -54,11 +62,11 @@ public class GameManager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    //void Start()
-    //{
-    //    
-    //}
-    //
+    void Start()
+    {
+        BGMPlayer = GetComponent<AudioSource>();
+    }
+    
     //// Update is called once per frame
     //void Update()
     //{
