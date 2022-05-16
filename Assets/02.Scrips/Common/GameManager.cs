@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     }
     public UISFXCollection UISfx;
     public BGMCollection Bgm;
+    Dictionary<AudioClip, CurrentPhase> Bgm2;
 
     public static GameManager instance = null;
     public GameDataSO gameData;
@@ -67,6 +68,13 @@ public class GameManager : MonoBehaviour
         BGMPlayer = GetComponent<AudioSource>();
     }
     
+    public void ChangeBGM(string bgmName)
+    {
+        BGMPlayer.clip = GameManager.instance.Bgm.titleBGM;
+    }
+
+
+
     //// Update is called once per frame
     //void Update()
     //{
