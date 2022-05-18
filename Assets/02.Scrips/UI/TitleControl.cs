@@ -27,7 +27,7 @@ public class TitleControl : MonoBehaviour
     private Image titleBackground; //타이틀 독립적 알파값 조정대상
     private Color titleBackgroundColor; //타이틀 알파값
     private CanvasGroup titleEndCG;
-    private WaitForSeconds waitTime; //기다리는 시간 여러번 할당 안하게 변수로 뺌
+    //private WaitForSeconds waitTime; //기다리는 시간 여러번 할당 안하게 변수로 뺌
     SceneStatus sceneStatus = SceneStatus.Fadein;
     string selectedName = "";
 
@@ -37,10 +37,6 @@ public class TitleControl : MonoBehaviour
     //public AudioClip titlePickSFX;
     //public AudioClip titleSelectSFX;
     
-    public delegate IEnumerator FadeHandler();
-    public static event FadeHandler OnFadeIn;
-    public static event FadeHandler OnFadeOut;
-
 
     void Start()
     {
@@ -60,8 +56,11 @@ public class TitleControl : MonoBehaviour
         titleUICG.alpha = 0.0f;
         titleBackgroundColor.a = 0.0f;
 
-        waitTime = new WaitForSeconds(0.01f);
-        StartCoroutine(BackgroundFadein());
+        //waitTime = GameManager.instance.FadeSync;
+
+        //StartCoroutine(BackgroundFadein(waitTime));
+        
+
         rotationCr =  buttonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
         StartCoroutine(rotationCr);
         
@@ -75,8 +74,20 @@ public class TitleControl : MonoBehaviour
             grayColor.b /= 2;
             toGrayout.color = grayColor;
         }
+    }
+
+    private void OnEnable()
+    {
+        GameManager.FadeInEvent += BackgroundFadein;
+
+        GameManager.instance.OnFadeInOut(new WaitForSeconds(0.02f), GameManager.FadeInOut.FadeIn);
         GameManager.instance.BGMPlayer.clip = GameManager.instance.Bgm.titleBGM;
         GameManager.instance.BGMPlayer.Play();
+    }
+
+    private void OnDisable()
+    {
+        
     }
 
     //▼
@@ -136,7 +147,7 @@ public class TitleControl : MonoBehaviour
             audioSource.volume -= 0.02f; 
 
             titleEndCG.alpha += 0.02f;
-            yield return waitTime;
+            yield return new WaitForSeconds(0.02f);
         }
         sceneStatus = SceneStatus.FadeoutDone;
     }
@@ -206,7 +217,7 @@ public class TitleControl : MonoBehaviour
             {
                 eventSystem.currentSelectedGameObject.GetComponent<Image>().color = buttonColor;
             }
-            yield return waitTime;
+            yield return new WaitForSeconds(0.02f);
         }
     }
 
@@ -219,25 +230,25 @@ public class TitleControl : MonoBehaviour
     }
 
     //▼ 백그라운드 먼저 밝아지게 할 코루틴
-    IEnumerator BackgroundFadein()
+    IEnumerator BackgroundFadein(WaitForSeconds fadeSync)
     {
         while(titleBackgroundColor.a<1)
         {
             titleBackgroundColor.a += 0.01f;
             titleBackground.color = titleBackgroundColor;
-            yield return waitTime;
+            yield return fadeSync;
         }
         
-        StartCoroutine(UIFadeIn());
+        StartCoroutine(UIFadeIn(fadeSync));
     }
 
     //▼ 나머지 UI 밝아지게 할 코루틴
-    IEnumerator UIFadeIn()
+    IEnumerator UIFadeIn(WaitForSeconds fadeSync)
     {
         while (titleUICG.alpha < 1)
         {
             titleUICG.alpha += 0.02f;
-            yield return waitTime;
+            yield return fadeSync;
         }
 
         var interactInit = GameObject.Find("TitlePanel").GetComponentsInChildren<CanvasGroup>();

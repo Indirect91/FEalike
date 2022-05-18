@@ -26,9 +26,17 @@ public class GameManager : MonoBehaviour
     {
         newGame,talk, travel, search, battle
     }
+
+    public enum FadeInOut
+    {
+        FadeIn, FadeOut
+    }
+
+
     public UISFXCollection UISfx;
     public BGMCollection Bgm;
-    Dictionary<AudioClip, CurrentPhase> Bgm2;
+    private float currentVolume;
+    //public WaitForSeconds FadeSync;
 
     public static GameManager instance = null;
     public GameDataSO gameData;
@@ -37,6 +45,13 @@ public class GameManager : MonoBehaviour
 
     public CurrentPhase currentPhase;
 
+    public delegate IEnumerator FadeHandler(WaitForSeconds waitTime);
+    public static event FadeHandler FadeInEvent;
+    public static event FadeHandler FadeOutEvent;
+
+
+
+    //▼ 게임매니져 싱글톤으로 유지
     private void Awake()
     {
         if (instance == null)
@@ -49,8 +64,11 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
+        //FadeSync = new WaitForSeconds(0.01f);
         //yesNoInput = false;
-}
+    }
+
+    //▼게임데이터 날리기
     public void DeleteSavedata()
     {
         gameData.isSavefileExists = false;
@@ -60,20 +78,62 @@ public class GameManager : MonoBehaviour
         UnityEditor.EditorUtility.SetDirty(gameData);
     }
 
+    void OnEnable()
+    {
+        FadeInEvent += BgmFadeIn;
+        FadeInEvent += BgmFadeOut;
+    }
+
+    private void OnDisable()
+    {
+        FadeInEvent -= BgmFadeIn;
+        FadeInEvent -= BgmFadeOut;
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
         BGMPlayer = GetComponent<AudioSource>();
+
     }
-    
-    public void ChangeBGM(string bgmName)
+
+    public IEnumerator BgmFadeIn(WaitForSeconds fadeTime)
     {
-        BGMPlayer.clip = GameManager.instance.Bgm.titleBGM;
+        currentVolume = 0.0f;
+        while (currentVolume<1.0f)
+        {
+            currentVolume += 0.02f;
+            BGMPlayer.volume = currentVolume;
+            yield return fadeTime;
+        }
+        BGMPlayer.volume = 1.0f;
     }
 
+    public IEnumerator BgmFadeOut(WaitForSeconds fadeTime)
+    {
+        currentVolume = 1.0f;
+        while (currentVolume > 0.0f)
+        {
+            currentVolume -= 0.02f;
+            BGMPlayer.volume = currentVolume;
+            yield return fadeTime;
+        }
+        BGMPlayer.volume = 0.0f;
+    }
 
+    public void OnFadeInOut(WaitForSeconds waitTime, FadeInOut fade)
+    {
+        if (fade == FadeInOut.FadeIn && FadeInEvent != null )
+        { 
+            StartCoroutine(FadeInEvent(waitTime)); 
+        }
+
+        if (fade == FadeInOut.FadeOut && FadeOutEvent != null)
+        {
+            StartCoroutine(FadeOutEvent(waitTime));
+        }
+    }
 
     //// Update is called once per frame
     //void Update()
