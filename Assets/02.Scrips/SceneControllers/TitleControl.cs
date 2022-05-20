@@ -2,19 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-
-enum SceneStatus
-{
-    Fadein, Fadeout, FadeoutDone, None
-}
 
 public class TitleControl : MonoBehaviour
 {
     //▼버튼 컨트롤 디자인용
-    private EventSystem eventSystem;
+    private EventSystem eventSystem; //버튼용 이벤트 시스템
     private Color buttonColor;
     private float buttonAlpha = 0.0f;
     private bool isAlphaPeak = false; 
@@ -27,18 +21,13 @@ public class TitleControl : MonoBehaviour
     private Image titleBackground; //타이틀 독립적 알파값 조정대상
     private Color titleBackgroundColor; //타이틀 알파값
     private CanvasGroup titleEndCG;
-    //private WaitForSeconds waitTime; //기다리는 시간 여러번 할당 안하게 변수로 뺌
-    SceneStatus sceneStatus = SceneStatus.Fadein;
-    string selectedName = "";
+    private string selectedName = ""; //픽된 메뉴 이름
 
-    //▼사운드 컨트롤
-    private AudioSource audioSource;
-    //public AudioClip titleBGM;
-    //public AudioClip titlePickSFX;
-    //public AudioClip titleSelectSFX;
+    private AudioSource audioSource; //사운드컨트롤
     
 
-    void Start()
+    //▼실행 순서를 맞추기 위해 Start 대신 어웨이크 사용
+    void Awake()
     {
         //▼초기 연결
         titleBackground = GameObject.Find("TitleBackground").GetComponent<Image>();
@@ -55,10 +44,6 @@ public class TitleControl : MonoBehaviour
         isSelectInitiated = false;
         titleUICG.alpha = 0.0f;
         titleBackgroundColor.a = 0.0f;
-
-        //waitTime = GameManager.instance.FadeSync;
-
-        //StartCoroutine(BackgroundFadein(waitTime));
         
 
         rotationCr =  buttonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
@@ -78,42 +63,49 @@ public class TitleControl : MonoBehaviour
 
     private void OnEnable()
     {
+        //켜질때, 현 씬만의 페이드인아웃용 코루틴을 게임매니져 이벤트에 등록
         GameManager.FadeInEvent += BackgroundFadein;
+        GameManager.instance.OnFadeInOut(new WaitForSeconds(0.02f), GameManager.SceneStatus.FadeIn);
+        GameManager.FadeOutEvent += allFadeOut;
 
-        GameManager.instance.OnFadeInOut(new WaitForSeconds(0.02f), GameManager.FadeInOut.FadeIn);
-        GameManager.instance.BGMPlayer.clip = GameManager.instance.Bgm.titleBGM;
-        GameManager.instance.BGMPlayer.Play();
+        SoundManager.instance.BGMPlayer.clip = SoundManager.instance.Bgm.titleBGM;
+        SoundManager.instance.BGMPlayer.Play();
+        
     }
 
     private void OnDisable()
     {
-        
+        GameManager.sceneStatus = GameManager.SceneStatus.None;
+        GameManager.FadeInEvent -= BackgroundFadein;
+        GameManager.FadeOutEvent -= allFadeOut;
     }
 
     //▼
     public void buttonSelectedReaction()
     {
-        if (sceneStatus == SceneStatus.None)
+        playSelectSound();
+        if (GameManager.sceneStatus == GameManager.SceneStatus.None)
         {
+            GameManager.sceneStatus = GameManager.SceneStatus.FadeOut;
             selectedName = eventSystem.currentSelectedGameObject.name;
-            StopCoroutine(rotationCr);
+            StopCoroutine(rotationCr); //아까 저장해둔 밝았다가 어두워지는 코루틴 멈춤
             StartCoroutine(flickerButton());
         }
     }
 
     public void playPickSound()
     {
-        if(sceneStatus == SceneStatus.None)
-        audioSource.PlayOneShot(GameManager.instance.UISfx.pickSFX, 1.0f); 
+        if (GameManager.sceneStatus == GameManager.SceneStatus.None)
+        {
+            audioSource.PlayOneShot(SoundManager.instance.UISfx.pickSFX, 1.0f);
+        }
         
     }
 
     public void playSelectSound()
     {
-        if (sceneStatus == SceneStatus.None)
-        {
-            audioSource.PlayOneShot(GameManager.instance.UISfx.selectSFX, 1.0f);
-        }
+
+         audioSource.PlayOneShot(SoundManager.instance.UISfx.selectSFX, 1.0f);
     }
 
      void selectProcess()
@@ -136,20 +128,21 @@ public class TitleControl : MonoBehaviour
         }
     }
 
-    IEnumerator allFadeOut()
+    IEnumerator allFadeOut(WaitForSeconds waitTime)
     {
-        audioSource.volume = 1.0f; 
+        var interactInit = GameObject.Find("TitlePanel").GetComponentsInChildren<CanvasGroup>();
+        foreach (var each in interactInit)
+        {
+            each.interactable = false;
+        }
         titleEndCG.alpha = 0.0f;
         titleEndCG.transform.SetAsLastSibling();
         while (titleEndCG.alpha < 1)
         {
-
-            audioSource.volume -= 0.02f; 
-
             titleEndCG.alpha += 0.02f;
-            yield return new WaitForSeconds(0.02f);
+            yield return waitTime;
         }
-        sceneStatus = SceneStatus.FadeoutDone;
+        GameManager.sceneStatus = GameManager.SceneStatus.FadeoutDone;
     }
     IEnumerator flickerButton()
     {
@@ -169,7 +162,7 @@ public class TitleControl : MonoBehaviour
 
             yield return new WaitForSeconds(0.15f);
         }
-        StartCoroutine(allFadeOut());
+        GameManager.instance.OnFadeInOut(new WaitForSeconds(0.02f), GameManager.SceneStatus.FadeOut);
     }
 
     IEnumerator buttonAlphaRotation()
@@ -181,7 +174,6 @@ public class TitleControl : MonoBehaviour
             {
                 prevSelected = eventSystem.currentSelectedGameObject;
                 isSelectInitiated = true;
-                Debug.Log(prevSelected);
             }
             else if(isSelectInitiated==true && eventSystem.currentSelectedGameObject==null)
             {
@@ -223,7 +215,7 @@ public class TitleControl : MonoBehaviour
 
     void Update()
     {
-        if(sceneStatus == SceneStatus.FadeoutDone)
+        if(GameManager.sceneStatus == GameManager.SceneStatus.FadeoutDone)
         { 
             selectProcess();
         }
@@ -263,7 +255,7 @@ public class TitleControl : MonoBehaviour
                 each.interactable = true; 
             }
         }
-        sceneStatus = SceneStatus.None;
+        GameManager.sceneStatus = GameManager.SceneStatus.None;
 
     }
 }

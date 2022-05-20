@@ -67,7 +67,7 @@ public class Stage0 : MonoBehaviour
     //¡åÆË¾÷Ã¢ ¶ç¿ì´Â ÇÁ¸®ÆÕ »ý¼º ¹× ¸àÆ®
     public void AskConfirmation(string whatToAsk)
     {
-        audioSource.PlayOneShot(GameManager.instance.UISfx.uiPopupSFX);
+        audioSource.PlayOneShot(SoundManager.instance.UISfx.uiPopupSFX);
         var confirmPopup = Instantiate(popUpPrefab);
         confirmPopup.transform.SetParent(GameObject.Find(stage0curPhase.ToString()).transform,false);
         confirmPopup.GetComponentInChildren<Text>().text = whatToAsk;
@@ -133,13 +133,13 @@ public class Stage0 : MonoBehaviour
                     }
                 else if(inputStream =="YesBtn")
                     {
-                        audioSource.PlayOneShot(GameManager.instance.UISfx.pickSFX);
+                        audioSource.PlayOneShot(SoundManager.instance.UISfx.pickSFX);
                         inputStream = "";
                         StartCoroutine(AllfadeOut(Stage0Phase.AskNamePhase));
                     }
                 else if(inputStream =="NoBtn")
                     {
-                        audioSource.PlayOneShot(GameManager.instance.UISfx.cancelSFX);
+                        audioSource.PlayOneShot(SoundManager.instance.UISfx.cancelSFX);
                         introVideo.Play();
                         inputStream = "";
 
@@ -157,7 +157,7 @@ public class Stage0 : MonoBehaviour
             case Stage0Phase.UserYesNoStandby:
                 if(Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    audioSource.PlayOneShot(GameManager.instance.UISfx.chooseSFX);
+                    audioSource.PlayOneShot(SoundManager.instance.UISfx.chooseSFX);
                     prevSelected = eventSystem.currentSelectedGameObject;
                 }
                 if(eventSystem.currentSelectedGameObject==null)
