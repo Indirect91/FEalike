@@ -22,11 +22,12 @@ public class GameManager : MonoBehaviour
 
     public CurrentPhase currentPhase;
 
+    public GameObject fadePanelPrefab;
+    private GameObject plainPanel = null;
+
     public delegate IEnumerator FadeHandler(WaitForSeconds waitTime);
     public static event FadeHandler FadeInEvent;
     public static event FadeHandler FadeOutEvent;
-
-
 
     //▼ 게임매니져 싱글톤으로 유지
     private void Awake()
@@ -55,13 +56,13 @@ public class GameManager : MonoBehaviour
     //▼블로그에 상세 기재하였음, 이벤트로 코루틴 여러개 동시 실행
     public void OnFadeInOut(WaitForSeconds waitTime, SceneStatus fade)
     {
-        
         FadeHandler toExecute = null;
 
         switch(fade)
         {
             case SceneStatus.FadeIn:
                 sceneStatus = SceneStatus.FadeIn;
+                createPlainPanel();
                 toExecute = FadeInEvent;
                 break;
             case SceneStatus.FadeOut:
@@ -87,6 +88,14 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    void createPlainPanel()
+    {
+        plainPanel = Instantiate(fadePanelPrefab);
+        plainPanel.GetComponent<CanvasGroup>().alpha = 0;
+        plainPanel.transform.SetParent(GameObject.Find("Canvas").transform, false);
+        plainPanel.transform.SetAsLastSibling();
     }
 
 }

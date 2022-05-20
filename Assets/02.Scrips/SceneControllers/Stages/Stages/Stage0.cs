@@ -14,7 +14,6 @@ public class Stage0 : StageBase
         IntroPhase, AskNamePhase, UserYesNoStandby, SceneChanging,None
     }
 
-    //private AudioSource audioSource;
     public GameObject popUpPrefab;
     public VideoPlayer introVideo;
     private bool isVideoEnded;
@@ -39,7 +38,7 @@ public class Stage0 : StageBase
     void Start()
     {
         // GameManager.instance.currentPhase = GameManager.CurrentPhase.newGame;
-        //audioSource = GetComponent<AudioSource>();
+
         plainBlack = GameObject.Find("PlainBlack").GetComponent<CanvasGroup>();
         plainBlack.alpha = 1.0f;
         phasePanels = new Dictionary<string, GameObject>();
