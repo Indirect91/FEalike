@@ -29,7 +29,7 @@ public class SoundManager : MonoBehaviour
     public BGMCollection Bgm;
     private float currentVolume;
     [HideInInspector]
-    public AudioSource BGMPlayer;
+    private AudioSource audioSource;
 
     //°ÂΩÃ±€≈Ê»≠
     private void Awake()
@@ -43,7 +43,7 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        BGMPlayer = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnEnable()
@@ -58,6 +58,16 @@ public class SoundManager : MonoBehaviour
         GameManager.FadeOutEvent -= BgmFadeOut;
     }
 
+    public void PlayBGM(AudioClip toPlay)
+    {
+        audioSource.clip = toPlay;
+        audioSource.Play();
+    }
+
+    public void PlaySfx(AudioClip toPlay)
+    {
+        audioSource.PlayOneShot(toPlay);
+    }
 
     public IEnumerator BgmFadeIn(WaitForSeconds fadeTime)
     {
@@ -65,10 +75,10 @@ public class SoundManager : MonoBehaviour
         while (currentVolume < 1.0f)
         {
             currentVolume += 0.02f;
-            BGMPlayer.volume = currentVolume;
+            audioSource.volume = currentVolume;
             yield return fadeTime;
         }
-        BGMPlayer.volume = 1.0f;
+        audioSource.volume = 1.0f;
         GameManager.sceneStatus = GameManager.SceneStatus.None;
     }
 
@@ -78,12 +88,25 @@ public class SoundManager : MonoBehaviour
         while (currentVolume > 0.0f)
         {
             currentVolume -= 0.02f;
-            BGMPlayer.volume = currentVolume;
+            audioSource.volume = currentVolume;
             yield return fadeTime;
         }
-        BGMPlayer.volume = 0.0f;
+        audioSource.volume = 0.0f;
         GameManager.sceneStatus = GameManager.SceneStatus.None;
     }
 
+    public void playPickSound()
+    {
+        if (GameManager.sceneStatus == GameManager.SceneStatus.None)
+        {
+            audioSource.PlayOneShot(UISfx.pickSFX, 1.0f);
+        }
+
+    }
+
+    public void playSelectSound()
+    {
+        audioSource.PlayOneShot(UISfx.selectSFX, 1.0f);
+    }
 
 }

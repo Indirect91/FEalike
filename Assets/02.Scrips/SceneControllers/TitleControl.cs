@@ -23,7 +23,7 @@ public class TitleControl : MonoBehaviour
     private CanvasGroup titleEndCG;
     private string selectedName = ""; //픽된 메뉴 이름
 
-    private AudioSource audioSource; //사운드컨트롤
+    
     
 
     //▼실행 순서를 맞추기 위해 Start 대신 어웨이크 사용
@@ -34,7 +34,7 @@ public class TitleControl : MonoBehaviour
         titleUICG = GameObject.Find("TitlePanel").GetComponent<CanvasGroup>();
         titleEndCG = GameObject.Find("PlainBlack").GetComponent<CanvasGroup>();
         buttonColor = GameObject.Find("NewGame").GetComponent<Image>().color;
-        audioSource = GetComponent<AudioSource>();
+        
         eventSystem = EventSystem.current;
 
 
@@ -68,9 +68,7 @@ public class TitleControl : MonoBehaviour
         GameManager.instance.OnFadeInOut(new WaitForSeconds(0.02f), GameManager.SceneStatus.FadeIn);
         GameManager.FadeOutEvent += allFadeOut;
 
-        SoundManager.instance.BGMPlayer.clip = SoundManager.instance.Bgm.titleBGM;
-        SoundManager.instance.BGMPlayer.Play();
-        
+        SoundManager.instance.PlayBGM(SoundManager.instance.Bgm.titleBGM);
     }
 
     private void OnDisable()
@@ -83,7 +81,7 @@ public class TitleControl : MonoBehaviour
     //▼
     public void buttonSelectedReaction()
     {
-        playSelectSound();
+        SoundManager.instance.playSelectSound();
         if (GameManager.sceneStatus == GameManager.SceneStatus.None)
         {
             GameManager.sceneStatus = GameManager.SceneStatus.FadeOut;
@@ -93,20 +91,6 @@ public class TitleControl : MonoBehaviour
         }
     }
 
-    public void playPickSound()
-    {
-        if (GameManager.sceneStatus == GameManager.SceneStatus.None)
-        {
-            audioSource.PlayOneShot(SoundManager.instance.UISfx.pickSFX, 1.0f);
-        }
-        
-    }
-
-    public void playSelectSound()
-    {
-
-         audioSource.PlayOneShot(SoundManager.instance.UISfx.selectSFX, 1.0f);
-    }
 
      void selectProcess()
     {

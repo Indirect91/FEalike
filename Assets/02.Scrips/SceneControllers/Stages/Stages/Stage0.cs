@@ -6,8 +6,7 @@ using UnityEngine.Video;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(AudioSource))]
-public class Stage0 : MonoBehaviour
+public class Stage0 : StageBase
 {
     //▼스테이지0에서만 사용할 열거형
     private enum Stage0Phase
@@ -15,7 +14,7 @@ public class Stage0 : MonoBehaviour
         IntroPhase, AskNamePhase, UserYesNoStandby, SceneChanging,None
     }
 
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
     public GameObject popUpPrefab;
     public VideoPlayer introVideo;
     private bool isVideoEnded;
@@ -40,7 +39,7 @@ public class Stage0 : MonoBehaviour
     void Start()
     {
         // GameManager.instance.currentPhase = GameManager.CurrentPhase.newGame;
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
         plainBlack = GameObject.Find("PlainBlack").GetComponent<CanvasGroup>();
         plainBlack.alpha = 1.0f;
         phasePanels = new Dictionary<string, GameObject>();
@@ -67,7 +66,7 @@ public class Stage0 : MonoBehaviour
     //▼팝업창 띄우는 프리팹 생성 및 멘트
     public void AskConfirmation(string whatToAsk)
     {
-        audioSource.PlayOneShot(SoundManager.instance.UISfx.uiPopupSFX);
+        SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.uiPopupSFX);
         var confirmPopup = Instantiate(popUpPrefab);
         confirmPopup.transform.SetParent(GameObject.Find(stage0curPhase.ToString()).transform,false);
         confirmPopup.GetComponentInChildren<Text>().text = whatToAsk;
@@ -133,13 +132,13 @@ public class Stage0 : MonoBehaviour
                     }
                 else if(inputStream =="YesBtn")
                     {
-                        audioSource.PlayOneShot(SoundManager.instance.UISfx.pickSFX);
+                        SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.pickSFX);
                         inputStream = "";
                         StartCoroutine(AllfadeOut(Stage0Phase.AskNamePhase));
                     }
                 else if(inputStream =="NoBtn")
                     {
-                        audioSource.PlayOneShot(SoundManager.instance.UISfx.cancelSFX);
+                        SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.cancelSFX);
                         introVideo.Play();
                         inputStream = "";
 
@@ -157,7 +156,7 @@ public class Stage0 : MonoBehaviour
             case Stage0Phase.UserYesNoStandby:
                 if(Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    audioSource.PlayOneShot(SoundManager.instance.UISfx.chooseSFX);
+                    SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.chooseSFX);
                     prevSelected = eventSystem.currentSelectedGameObject;
                 }
                 if(eventSystem.currentSelectedGameObject==null)
