@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
     public UISFXCollection UISfx;
     public BGMCollection Bgm;
     private float currentVolume;
+    private float maxVolume; //TODO: 나중에 사운드 옵션 넣을거라면 그때 사용하기
     [HideInInspector]
     private AudioSource audioSource;
 

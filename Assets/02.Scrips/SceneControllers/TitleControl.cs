@@ -66,7 +66,6 @@ public class TitleControl : MonoBehaviour, IFadeProcess
 
     private void OnDisable()
     {
-       // FadeManager.sceneStatus = FadeManager.SceneStatus.None;
         GameManager.FadeInEvent -= BackgroundFadein;
         GameManager.FadeOutEvent -= AllFadeOut;
     }

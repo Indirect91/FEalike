@@ -36,7 +36,7 @@ public class CreditControl : MonoBehaviour, IFadeProcess
             yield return null;
         }
         yield return new WaitForSeconds(0.2f);
-        SceneManager.LoadScene("Main");
+        LoadingControl.LoadSceneWithLoading("Main");
     }
 
 
