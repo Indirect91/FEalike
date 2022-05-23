@@ -11,23 +11,16 @@ public class GameManager : MonoBehaviour
         NewGame,Talk, Travel, Search, Battle
     }
 
-    public enum SceneStatus
-    {
-        FadeIn, FadeOut, FadeoutDone, None
-    }
-
-    public static SceneStatus sceneStatus = SceneStatus.FadeIn;
     public static GameManager instance = null;
     public GameDataSO gameData;
 
     public CurrentPhase currentPhase;
 
-    public GameObject fadePanelPrefab;
-    private GameObject plainPanel = null;
-
     public delegate IEnumerator FadeHandler(WaitForSeconds waitTime);
     public static event FadeHandler FadeInEvent;
     public static event FadeHandler FadeOutEvent;
+    public static float fadeSync = 0.01f;
+
 
     //▼ 게임매니져 싱글톤으로 유지
     private void Awake()
@@ -41,6 +34,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
     }
 
     //▼게임데이터 날리기
@@ -54,19 +48,19 @@ public class GameManager : MonoBehaviour
     }
 
     //▼블로그에 상세 기재하였음, 이벤트로 코루틴 여러개 동시 실행
-    public void OnFadeInOut(WaitForSeconds waitTime, SceneStatus fade)
+    public void OnFadeInOut(WaitForSeconds waitTime, FadeManager.SceneStatus fade)
     {
         FadeHandler toExecute = null;
 
         switch(fade)
         {
-            case SceneStatus.FadeIn:
-                sceneStatus = SceneStatus.FadeIn;
-                createPlainPanel();
+            case FadeManager.SceneStatus.FadeIn:
+                FadeManager.sceneStatus = FadeManager.SceneStatus.FadeIn;
+                FadeManager.instance.createPlainPanel();
                 toExecute = FadeInEvent;
                 break;
-            case SceneStatus.FadeOut:
-                sceneStatus = SceneStatus.FadeOut;
+            case FadeManager.SceneStatus.FadeOut:
+                FadeManager.sceneStatus = FadeManager.SceneStatus.FadeOut;
                 toExecute = FadeOutEvent;
                 break;
             default:
@@ -89,13 +83,4 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-    void createPlainPanel()
-    {
-        plainPanel = Instantiate(fadePanelPrefab);
-        plainPanel.GetComponent<CanvasGroup>().alpha = 0;
-        plainPanel.transform.SetParent(GameObject.Find("Canvas").transform, false);
-        plainPanel.transform.SetAsLastSibling();
-    }
-
 }

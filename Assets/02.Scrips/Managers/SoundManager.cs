@@ -74,39 +74,22 @@ public class SoundManager : MonoBehaviour
         currentVolume = 0.0f;
         while (currentVolume < 1.0f)
         {
-            currentVolume += 0.02f;
+            currentVolume += GameManager.fadeSync;
             audioSource.volume = currentVolume;
             yield return fadeTime;
         }
         audioSource.volume = 1.0f;
-        GameManager.sceneStatus = GameManager.SceneStatus.None;
     }
 
-    public IEnumerator BgmFadeOut(WaitForSeconds fadeTime)
+    public IEnumerator BgmFadeOut(WaitForSeconds waitTime)
     {
         currentVolume = 1.0f;
         while (currentVolume > 0.0f)
         {
-            currentVolume -= 0.02f;
+            currentVolume -= GameManager.fadeSync;
             audioSource.volume = currentVolume;
-            yield return fadeTime;
+            yield return waitTime;
         }
         audioSource.volume = 0.0f;
-        GameManager.sceneStatus = GameManager.SceneStatus.None;
     }
-
-    public void playPickSound()
-    {
-        if (GameManager.sceneStatus == GameManager.SceneStatus.None)
-        {
-            audioSource.PlayOneShot(UISfx.pickSFX, 1.0f);
-        }
-
-    }
-
-    public void playSelectSound()
-    {
-        audioSource.PlayOneShot(UISfx.selectSFX, 1.0f);
-    }
-
 }
