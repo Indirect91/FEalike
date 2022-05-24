@@ -1,0 +1,5004 @@
+fileFormatVersion: 2
+guid: 13fd17a08eba815439b2bee070e5a24e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6309694336984264954
+    second: CrestCrop_0
+  - first:
+      213: -4265195250150383240
+    second: CrestCrop_1
+  - first:
+      213: 3456688474341409344
+    second: CrestCrop_2
+  - first:
+      213: -2480078476830596164
+    second: CrestCrop_3
+  - first:
+      213: 2461566705420922388
+    second: CrestCrop_4
+  - first:
+      213: 2022820706250186862
+    second: CrestCrop_5
+  - first:
+      213: -2865495390492254972
+    second: CrestCrop_6
+  - first:
+      213: -3500849328550919885
+    second: CrestCrop_7
+  - first:
+      213: -5572371338317203713
+    second: CrestCrop_8
+  - first:
+      213: 3165242213536003579
+    second: CrestCrop_9
+  - first:
+      213: -2330235462628440261
+    second: CrestCrop_10
+  - first:
+      213: -4582484671178809464
+    second: CrestCrop_11
+  - first:
+      213: -1519529425055213918
+    second: CrestCrop_12
+  - first:
+      213: -2733286500946972942
+    second: CrestCrop_13
+  - first:
+      213: 5865239660295610775
+    second: CrestCrop_14
+  - first:
+      213: 4400023254755969325
+    second: CrestCrop_15
+  - first:
+      213: 677030330518941885
+    second: CrestCrop_16
+  - first:
+      213: 6791818582658086966
+    second: CrestCrop_17
+  - first:
+      213: 7602423302188655863
+    second: CrestCrop_18
+  - first:
+      213: -3445871867881921521
+    second: CrestCrop_19
+  - first:
+      213: 235734393821527049
+    second: CrestCrop_20
+  - first:
+      213: -8941898392836577020
+    second: CrestCrop_21
+  - first:
+      213: 7175051460780293850
+    second: CrestCrop_22
+  - first:
+      213: -3101160604673358512
+    second: CrestCrop_23
+  - first:
+      213: 5141468362419649966
+    second: CrestCrop_24
+  - first:
+      213: -639592166917345877
+    second: CrestCrop_25
+  - first:
+      213: 1701767589774015395
+    second: CrestCrop_26
+  - first:
+      213: -8422670215664607720
+    second: CrestCrop_27
+  - first:
+      213: 5156551649805711649
+    second: CrestCrop_28
+  - first:
+      213: -3671040111626887174
+    second: CrestCrop_29
+  - first:
+      213: -4848322752724342808
+    second: CrestCrop_30
+  - first:
+      213: -5742429267625961550
+    second: CrestCrop_31
+  - first:
+      213: 1915998825752459613
+    second: CrestCrop_32
+  - first:
+      213: -8747681455350953959
+    second: CrestCrop_33
+  - first:
+      213: 5602021949871821463
+    second: CrestCrop_34
+  - first:
+      213: 857790024151651197
+    second: CrestCrop_35
+  - first:
+      213: -7700458131991597655
+    second: CrestCrop_36
+  - first:
+      213: -5465104296540989551
+    second: CrestCrop_37
+  - first:
+      213: -4278309899537097693
+    second: CrestCrop_38
+  - first:
+      213: 4680474071258316090
+    second: CrestCrop_39
+  - first:
+      213: -1651836755541724958
+    second: CrestCrop_40
+  - first:
+      213: -9057870933160302019
+    second: CrestCrop_41
+  - first:
+      213: 175773703841758271
+    second: CrestCrop_42
+  - first:
+      213: -4799974759339065349
+    second: CrestCrop_43
+  - first:
+      213: 3292415559492612013
+    second: CrestCrop_44
+  - first:
+      213: 834097131451726209
+    second: CrestCrop_45
+  - first:
+      213: -674002375016467965
+    second: CrestCrop_46
+  - first:
+      213: -8451653927881028867
+    second: CrestCrop_47
+  - first:
+      213: -4509068711865898809
+    second: CrestCrop_48
+  - first:
+      213: 2604601588750183286
+    second: CrestCrop_49
+  - first:
+      213: -6773738119823496214
+    second: CrestCrop_50
+  - first:
+      213: 9059923900812019713
+    second: CrestCrop_51
+  - first:
+      213: 4263688822833308838
+    second: CrestCrop_52
+  - first:
+      213: -5724074457252063227
+    second: CrestCrop_53
+  - first:
+      213: -5219463468132868223
+    second: CrestCrop_54
+  - first:
+      213: 3608947409731968570
+    second: CrestCrop_55
+  - first:
+      213: -378281266427005991
+    second: CrestCrop_56
+  - first:
+      213: 1668357503689211004
+    second: CrestCrop_57
+  - first:
+      213: -4467105394123762701
+    second: CrestCrop_58
+  - first:
+      213: -7021763148754550176
+    second: CrestCrop_59
+  - first:
+      213: 6995156478738557091
+    second: CrestCrop_60
+  - first:
+      213: 6152094922988262080
+    second: CrestCrop_61
+  - first:
+      213: 3356672744422029875
+    second: CrestCrop_62
+  - first:
+      213: -9192623445278689173
+    second: CrestCrop_63
+  - first:
+      213: 4696265985303397612
+    second: CrestCrop_64
+  - first:
+      213: -3009937365668583842
+    second: CrestCrop_65
+  - first:
+      213: -2466986755099551827
+    second: CrestCrop_66
+  - first:
+      213: -7347389812939448717
+    second: CrestCrop_67
+  - first:
+      213: -8030961269720136051
+    second: CrestCrop_68
+  - first:
+      213: 7764731156522540270
+    second: CrestCrop_69
+  - first:
+      213: -8909664017265194142
+    second: CrestCrop_70
+  - first:
+      213: -2923376571809108988
+    second: CrestCrop_71
+  - first:
+      213: -7549154526367561593
+    second: CrestCrop_72
+  - first:
+      213: 3682686117216509737
+    second: CrestCrop_73
+  - first:
+      213: 5329736907809501614
+    second: CrestCrop_74
+  - first:
+      213: 3421145757881950788
+    second: CrestCrop_75
+  - first:
+      213: -9067190878992444880
+    second: CrestCrop_76
+  - first:
+      213: 7720458129117805613
+    second: CrestCrop_77
+  - first:
+      213: 2558886919309112125
+    second: CrestCrop_78
+  - first:
+      213: -1788702765160616034
+    second: CrestCrop_79
+  - first:
+      213: 8436196648194647735
+    second: CrestCrop_80
+  - first:
+      213: -4807357053667928034
+    second: CrestCrop_81
+  - first:
+      213: -4808827769675657869
+    second: CrestCrop_82
+  - first:
+      213: 3224482417212460268
+    second: CrestCrop_83
+  - first:
+      213: 6675336593366275257
+    second: CrestCrop_84
+  - first:
+      213: 971529392598747101
+    second: CrestCrop_85
+  - first:
+      213: 1847748275092772637
+    second: CrestCrop_86
+  - first:
+      213: -8162696656277420172
+    second: CrestCrop_87
+  - first:
+      213: -8036626373715509509
+    second: CrestCrop_88
+  - first:
+      213: -6821440764297643182
+    second: CrestCrop_89
+  - first:
+      213: 5258246215406567820
+    second: CrestCrop_90
+  - first:
+      213: 1044884270166971328
+    second: CrestCrop_91
+  - first:
+      213: -2812130860920321133
+    second: CrestCrop_92
+  - first:
+      213: 7894388528395960563
+    second: CrestCrop_93
+  - first:
+      213: 4727397003552359108
+    second: CrestCrop_94
+  - first:
+      213: 1735084936587398015
+    second: CrestCrop_95
+  - first:
+      213: 5970386173154334444
+    second: CrestCrop_96
+  - first:
+      213: 7108542263002699681
+    second: CrestCrop_97
+  - first:
+      213: 3651292688537550551
+    second: CrestCrop_98
+  - first:
+      213: -7664211810826526266
+    second: CrestCrop_99
+  - first:
+      213: 9092985249459810950
+    second: CrestCrop_100
+  - first:
+      213: -1193658622444474498
+    second: CrestCrop_101
+  - first:
+      213: -1972860793745308715
+    second: CrestCrop_102
+  - first:
+      213: -6533689626139524624
+    second: CrestCrop_103
+  - first:
+      213: -6665231189795157719
+    second: CrestCrop_104
+  - first:
+      213: 4199648641717138240
+    second: CrestCrop_105
+  - first:
+      213: -1533914171831633456
+    second: CrestCrop_106
+  - first:
+      213: -8798024645195133959
+    second: CrestCrop_107
+  - first:
+      213: -8402261137792828170
+    second: CrestCrop_108
+  - first:
+      213: -1414804019316777252
+    second: CrestCrop_109
+  - first:
+      213: -7360911421691038446
+    second: CrestCrop_110
+  - first:
+      213: -7152832623504389056
+    second: CrestCrop_111
+  - first:
+      213: 7266006355051529125
+    second: CrestCrop_112
+  - first:
+      213: -4273581024922746909
+    second: CrestCrop_113
+  - first:
+      213: -1927551724012150160
+    second: CrestCrop_114
+  - first:
+      213: -7797380227416352161
+    second: CrestCrop_115
+  - first:
+      213: 8275730760758306863
+    second: CrestCrop_116
+  - first:
+      213: 3911759116555447112
+    second: CrestCrop_117
+  - first:
+      213: -2533586025929095
+    second: CrestCrop_118
+  - first:
+      213: -3902858139608679815
+    second: CrestCrop_119
+  - first:
+      213: -2565874719687792505
+    second: CrestCrop_120
+  - first:
+      213: 2088675098641757826
+    second: CrestCrop_121
+  - first:
+      213: -1956183471918107055
+    second: CrestCrop_122
+  - first:
+      213: 3310101620537851260
+    second: CrestCrop_123
+  - first:
+      213: -5994947526685915014
+    second: CrestCrop_124
+  - first:
+      213: 1494618891876061751
+    second: CrestCrop_125
+  - first:
+      213: -5742951921214335402
+    second: CrestCrop_126
+  - first:
+      213: -3282402111468649649
+    second: CrestCrop_127
+  - first:
+      213: -7812811112310609341
+    second: CrestCrop_128
+  - first:
+      213: 1442096912406515306
+    second: CrestCrop_129
+  - first:
+      213: 6198660839786289134
+    second: CrestCrop_130
+  - first:
+      213: -770911110433421410
+    second: CrestCrop_131
+  - first:
+      213: 7057205431557255127
+    second: CrestCrop_132
+  - first:
+      213: -3613273469784547635
+    second: CrestCrop_133
+  - first:
+      213: 1096476831315047106
+    second: CrestCrop_134
+  - first:
+      213: 2462567385747756280
+    second: CrestCrop_135
+  - first:
+      213: -1308517119261486031
+    second: CrestCrop_136
+  - first:
+      213: 9183862583760543246
+    second: CrestCrop_137
+  - first:
+      213: -6078183641770012743
+    second: CrestCrop_138
+  - first:
+      213: 5267456363218756268
+    second: CrestCrop_139
+  - first:
+      213: -7728332192123515161
+    second: CrestCrop_140
+  - first:
+      213: 5543793317365020256
+    second: CrestCrop_141
+  - first:
+      213: 6689719455906466919
+    second: CrestCrop_142
+  - first:
+      213: 3257122212100408798
+    second: CrestCrop_143
+  - first:
+      213: 1915589117871211520
+    second: CrestCrop_144
+  - first:
+      213: 7411568230438964409
+    second: CrestCrop_145
+  - first:
+      213: 6477189618194346783
+    second: CrestCrop_146
+  - first:
+      213: 9137099593352534182
+    second: CrestCrop_147
+  - first:
+      213: -7242268612615422524
+    second: CrestCrop_148
+  - first:
+      213: 6079305966278186899
+    second: CrestCrop_149
+  - first:
+      213: 117619565411323014
+    second: CrestCrop_150
+  - first:
+      213: 9053395413040228696
+    second: CrestCrop_151
+  - first:
+      213: 3902668188484340742
+    second: CrestCrop_152
+  - first:
+      213: -1485669297936523184
+    second: CrestCrop_153
+  - first:
+      213: 688733813181777701
+    second: CrestCrop_154
+  - first:
+      213: -897471889135935028
+    second: CrestCrop_155
+  - first:
+      213: 7703099376972830434
+    second: CrestCrop_156
+  - first:
+      213: 4631501319595127547
+    second: CrestCrop_157
+  - first:
+      213: -1498079950169195111
+    second: CrestCrop_158
+  - first:
+      213: 3922998724150597349
+    second: CrestCrop_159
+  - first:
+      213: 7224369369077016706
+    second: CrestCrop_160
+  - first:
+      213: -7555976022889495453
+    second: CrestCrop_161
+  - first:
+      213: -683216466601589030
+    second: CrestCrop_162
+  - first:
+      213: -8455323053093750995
+    second: CrestCrop_163
+  - first:
+      213: -8228735897476263510
+    second: CrestCrop_164
+  - first:
+      213: -8157145006977926435
+    second: CrestCrop_165
+  - first:
+      213: 4944611353839987516
+    second: CrestCrop_166
+  - first:
+      213: 3057766096956572146
+    second: CrestCrop_167
+  - first:
+      213: 311767041760482247
+    second: CrestCrop_168
+  - first:
+      213: -382211561166643513
+    second: CrestCrop_169
+  - first:
+      213: 6298269692736340103
+    second: CrestCrop_170
+  - first:
+      213: 2399064787618219173
+    second: CrestCrop_171
+  - first:
+      213: -6486520034156601943
+    second: CrestCrop_172
+  - first:
+      213: -4669627444355765670
+    second: CrestCrop_173
+  - first:
+      213: -5292248472517899946
+    second: CrestCrop_174
+  - first:
+      213: -3724891889592335662
+    second: CrestCrop_175
+  - first:
+      213: 892216102805081942
+    second: CrestCrop_176
+  - first:
+      213: -4626160787588461730
+    second: CrestCrop_177
+  - first:
+      213: -7442056168912256089
+    second: CrestCrop_178
+  - first:
+      213: 6602998187445112767
+    second: CrestCrop_179
+  - first:
+      213: -4851386158252276238
+    second: CrestCrop_180
+  - first:
+      213: 571608686999741800
+    second: CrestCrop_181
+  - first:
+      213: 6164697471266389677
+    second: CrestCrop_182
+  - first:
+      213: -6495391708436909610
+    second: CrestCrop_183
+  - first:
+      213: 5079118936140533461
+    second: CrestCrop_184
+  - first:
+      213: 6403142168307755379
+    second: CrestCrop_185
+  - first:
+      213: -4545263662667188328
+    second: CrestCrop_186
+  - first:
+      213: 4565574241948743235
+    second: CrestCrop_187
+  - first:
+      213: -5156456333175134193
+    second: CrestCrop_188
+  - first:
+      213: -6120557287108333789
+    second: CrestCrop_189
+  - first:
+      213: 3081497874877114310
+    second: CrestCrop_190
+  - first:
+      213: -5472163059509503726
+    second: CrestCrop_191
+  - first:
+      213: -5817127044622596169
+    second: CrestCrop_192
+  - first:
+      213: -1203342327338801751
+    second: CrestCrop_193
+  - first:
+      213: 1990094473703162912
+    second: CrestCrop_194
+  - first:
+      213: 3321392692540429120
+    second: CrestCrop_195
+  - first:
+      213: -5162049503150755778
+    second: CrestCrop_196
+  - first:
+      213: 5914861218322036440
+    second: CrestCrop_197
+  - first:
+      213: 8620117117529593704
+    second: CrestCrop_198
+  - first:
+      213: -5881517172542145399
+    second: CrestCrop_199
+  - first:
+      213: 818831218746373921
+    second: CrestCrop_200
+  - first:
+      213: 6533597103217414364
+    second: CrestCrop_201
+  - first:
+      213: -8923603931080037373
+    second: CrestCrop_202
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CrestCrop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f42c24e667f68a0800000000000000
+      internalID: -6309694336984264954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 7500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8716a19948bfec4c0800000000000000
+      internalID: -4265195250150383240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 7500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0428e446adf98ff20800000000000000
+      internalID: 3456688474341409344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 7500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3ab6de3cdf49dd0800000000000000
+      internalID: -2480078476830596164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41eea8b60ed392220800000000000000
+      internalID: 2461566705420922388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 7350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60e85807b0821c10800000000000000
+      internalID: 2022820706250186862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 7350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d9038df17bb38d0800000000000000
+      internalID: -2865495390492254972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 7350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331ce8f751c7a6fc0800000000000000
+      internalID: -3500849328550919885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6f80f9ac5faa2b0800000000000000
+      internalID: -5572371338317203713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_9
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 7200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf572e5e5033deb20800000000000000
+      internalID: 3165242213536003579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 7200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37830f513759afd0800000000000000
+      internalID: -2330235462628440261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_11
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 7200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fd6b9787eb760c0800000000000000
+      internalID: -4582484671178809464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a694d9e90c89eae0800000000000000
+      internalID: -1519529425055213918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_13
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 7050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe6fa1b86a611ad0800000000000000
+      internalID: -2733286500946972942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_14
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 7050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791e37a4564856150800000000000000
+      internalID: 5865239660295610775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_15
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 7050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29003f76d5001d30800000000000000
+      internalID: 4400023254755969325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db03fb0af7b456900800000000000000
+      internalID: 677030330518941885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6387b3e2403614e50800000000000000
+      internalID: 6791818582658086966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f46b17c6bb318960800000000000000
+      internalID: 7602423302188655863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04e26d0bcdcd20d0800000000000000
+      internalID: -3445871867881921521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cf215ae2f754300800000000000000
+      internalID: 235734393821527049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_21
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409e655b9cef7e380800000000000000
+      internalID: -8941898392836577020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adef4fcd947e29360800000000000000
+      internalID: 7175051460780293850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05542075cd676f4d0800000000000000
+      internalID: -3101160604673358512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadbee52c3a2a5740800000000000000
+      internalID: 5141468362419649966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_25
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bade4c91056bf17f0800000000000000
+      internalID: -639592166917345877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abb0c64b94ed9710800000000000000
+      internalID: 1701767589774015395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_27
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e5c07601aac1b80800000000000000
+      internalID: -8422670215664607720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129bf98a760cf8740800000000000000
+      internalID: 5156551649805711649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_29
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affd44ee778dd0dc0800000000000000
+      internalID: -3671040111626887174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_30
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7eb67d42c47bcb0800000000000000
+      internalID: -4848322752724342808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_31
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7195b710bce40b0800000000000000
+      internalID: -5742429267625961550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d597a07d7cef69a10800000000000000
+      internalID: 1915998825752459613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_33
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918c885401ef99680800000000000000
+      internalID: -8747681455350953959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7921d0a58416ebd40800000000000000
+      internalID: 5602021949871821463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_35
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73de617b7b77eb00800000000000000
+      internalID: 857790024151651197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad6fd2b02a722590800000000000000
+      internalID: -7700458131991597655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_37
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1979630099c0824b0800000000000000
+      internalID: -5465104296540989551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_38
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cdd0750d360a4c0800000000000000
+      internalID: -4278309899537097693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_39
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d37cd9e5264f040800000000000000
+      internalID: 4680474071258316090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0700ff83f7319e0800000000000000
+      internalID: -1651836755541724958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_41
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ae4af706afb4280800000000000000
+      internalID: -9057870933160302019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_42
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cb75a9049707200800000000000000
+      internalID: 175773703841758271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_43
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 6000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfff0c24360136db0800000000000000
+      internalID: -4799974759339065349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafa684e18201bd20800000000000000
+      internalID: 3292415559492612013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_45
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1893a5cfbee439b00800000000000000
+      internalID: 834097131451726209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_46
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302bf53396675a6f0800000000000000
+      internalID: -674002375016467965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_47
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfacd180881b5ba80800000000000000
+      internalID: -8451653927881028867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8a76985e19c61c0800000000000000
+      internalID: -4509068711865898809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_49
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b6fde5857652420800000000000000
+      internalID: 2604601588750183286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_50
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aebe56e9119def1a0800000000000000
+      internalID: -6773738119823496214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_51
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108c8f749c05bbd70800000000000000
+      internalID: 9059923900812019713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a468c5f46aab2b30800000000000000
+      internalID: 4263688822833308838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_53
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5089a9bcb900090b0800000000000000
+      internalID: -5724074457252063227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_54
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fdfcf21adb097b0800000000000000
+      internalID: -5219463468132868223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_55
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ed3225c8e851230800000000000000
+      internalID: 3608947409731968570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3fe61413310caf0800000000000000
+      internalID: -378281266427005991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_57
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7cb0cd6f42372710800000000000000
+      internalID: 1668357503689211004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_58
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f39501df47a102c0800000000000000
+      internalID: -4467105394123762701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_59
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0628e8d7e9fad8e90800000000000000
+      internalID: -7021763148754550176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8eb7761c9c31160800000000000000
+      internalID: 6995156478738557091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2133dbcb1a06550800000000000000
+      internalID: 6152094922988262080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_62
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ab28e931c459e20800000000000000
+      internalID: 3356672744422029875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_63
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b687c3e5ead3d6080800000000000000
+      internalID: -9192623445278689173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce442c0280d7c2140800000000000000
+      internalID: 4696265985303397612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_65
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 5100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56262bc9ed8a36d0800000000000000
+      internalID: -3009937365668583842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_66
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da792bced9083cdd0800000000000000
+      internalID: -2466986755099551827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_67
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e9b6da4e3d80a90800000000000000
+      internalID: -7347389812939448717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d864969664b4c8090800000000000000
+      internalID: -8030961269720136051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_69
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec1fe8f8ddd1cb60800000000000000
+      internalID: 7764731156522540270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_70
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b04de18c38a5480800000000000000
+      internalID: -8909664017265194142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_71
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c6e942f741e67d0800000000000000
+      internalID: -2923376571809108988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788445594f30c3790800000000000000
+      internalID: -7549154526367561593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_73
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fd3fb03878b1330800000000000000
+      internalID: 3682686117216509737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_74
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea13640ca7707f940800000000000000
+      internalID: 5329736907809501614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_75
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4426367d0f95a7f20800000000000000
+      internalID: 3421145757881950788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0325ef28fedda2280800000000000000
+      internalID: -9067190878992444880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_77
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cf75183c3942b60800000000000000
+      internalID: 7720458129117805613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_78
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3330d5781ef28320800000000000000
+      internalID: 2558886919309112125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_79
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fa7d1ef404d27e0800000000000000
+      internalID: -1788702765160616034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6abf69724631570800000000000000
+      internalID: 8436196648194647735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_81
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1897abea36d84db0800000000000000
+      internalID: -4807357053667928034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_82
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37dc27a2f9c934db0800000000000000
+      internalID: -4808827769675657869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_83
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec0176aca9afbc20800000000000000
+      internalID: 3224482417212460268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b453c3a34f83ac50800000000000000
+      internalID: 6675336593366275257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_85
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd703bec5d09b7d00800000000000000
+      internalID: 971529392598747101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_86
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17de33344584a910800000000000000
+      internalID: 1847748275092772637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_87
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477c05193a648be80800000000000000
+      internalID: -8162696656277420172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfeb62a94ea287090800000000000000
+      internalID: -8036626373715509509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_89
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b7ba334cf5551a0800000000000000
+      internalID: -6821440764297643182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_90
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81c9d2d21b09f840800000000000000
+      internalID: 5258246215406567820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_91
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c312ba25bc208e00800000000000000
+      internalID: 1044884270166971328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_92
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b4eec91ed49f8d0800000000000000
+      internalID: -2812130860920321133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_93
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 4050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0c5f15a808e8d60800000000000000
+      internalID: 7894388528395960563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_94
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 4050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c20cf427861b9140800000000000000
+      internalID: 4727397003552359108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_95
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 4050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b4c649e82441810800000000000000
+      internalID: 1735084936587398015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce694ce87921bd250800000000000000
+      internalID: 5970386173154334444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_97
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a79029868d96a260800000000000000
+      internalID: 7108542263002699681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_98
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7def247da5ffba230800000000000000
+      internalID: 3651292688537550551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_99
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c1e45cf6ff33a590800000000000000
+      internalID: -7664211810826526266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6823bed58e5c03e70800000000000000
+      internalID: 9092985249459810950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_101
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f6d12aec54f6fe0800000000000000
+      internalID: -1193658622444474498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_102
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3048d8f8dfe94e0800000000000000
+      internalID: -1972860793745308715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_103
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f18c49e6eba355a0800000000000000
+      internalID: -6533689626139524624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929c76afb875083a0800000000000000
+      internalID: -6665231189795157719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_105
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043700f5036284a30800000000000000
+      internalID: 4199648641717138240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_106
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9b900103176bae0800000000000000
+      internalID: -1533914171831633456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_107
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb030af23327e580800000000000000
+      internalID: -8798024645195133959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fcf9c3230c256b80800000000000000
+      internalID: -8402261137792828170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_109
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde14d98d3b9d5ce0800000000000000
+      internalID: -1414804019316777252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_110
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2157dfecf0ac8d990800000000000000
+      internalID: -7360911421691038446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_111
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c023250a80cbc90800000000000000
+      internalID: -7152832623504389056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3c390784a06d460800000000000000
+      internalID: 7266006355051529125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_113
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef31a243b031b4c0800000000000000
+      internalID: -4273581024922746909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_114
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072601c6be5ff35e0800000000000000
+      internalID: -1927551724012150160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_115
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a9136def32ac390800000000000000
+      internalID: -7797380227416352161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_116
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28a5cbb74d49d270800000000000000
+      internalID: 8275730760758306863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_117
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bee2de03c594630800000000000000
+      internalID: 3911759116555447112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_118
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976aae887bff6fff0800000000000000
+      internalID: -2533586025929095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_119
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97af1e3433346d9c0800000000000000
+      internalID: -3902858139608679815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788aada798e246cd0800000000000000
+      internalID: -2565874719687792505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_121
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 3000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286feb99fe67cfc10800000000000000
+      internalID: 2088675098641757826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_122
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 3000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156b4d02f7d3ad4e0800000000000000
+      internalID: -1956183471918107055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_123
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 3000
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d7a9ed2e7dfed20800000000000000
+      internalID: 3310101620537851260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7887c0bcfaadcca0800000000000000
+      internalID: -5994947526685915014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_125
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7325cdc96f3fdb410800000000000000
+      internalID: 1494618891876061751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_126
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6565fd5b7afec40b0800000000000000
+      internalID: -5742951921214335402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_127
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2850
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f434be7aba09272d0800000000000000
+      internalID: -3282402111468649649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a6089ffa1539390800000000000000
+      internalID: -7812811112310609341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_129
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6e8da3508b530410800000000000000
+      internalID: 1442096912406515306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_130
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7169e1131160650800000000000000
+      internalID: 6198660839786289134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_131
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2700
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97c635fd6c2d45f0800000000000000
+      internalID: -770911110433421410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df6de603fa30f160800000000000000
+      internalID: 7057205431557255127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_133
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce16255ce21bddc0800000000000000
+      internalID: -3613273469784547635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_134
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c2baf26ed7773f00800000000000000
+      internalID: 1096476831315047106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_135
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2550
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f415f67dfbcc2220800000000000000
+      internalID: 2462567385747756280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134d6e3ec9637dde0800000000000000
+      internalID: -1308517119261486031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_137
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e5c0b9c52a37f70800000000000000
+      internalID: 9183862583760543246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_138
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf45b07e24f5aba0800000000000000
+      internalID: -6078183641770012743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_139
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2400
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2668777a3c91940800000000000000
+      internalID: 5267456363218756268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee034651d27fb490800000000000000
+      internalID: -7728332192123515161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_141
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066f9bd56a28fec40800000000000000
+      internalID: 5543793317365020256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_142
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76c0358c668a6dc50800000000000000
+      internalID: 6689719455906466919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_143
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2250
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5874a156f933d20800000000000000
+      internalID: 3257122212100408798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004415a472a859a10800000000000000
+      internalID: 1915589117871211520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_145
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 2100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc82e3990e2bd660800000000000000
+      internalID: 7411568230438964409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_146
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 2100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13725fd3a993e950800000000000000
+      internalID: 6477189618194346783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_147
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2100
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8d4237baf7dce70800000000000000
+      internalID: 9137099593352534182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_148
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cdb819611b4e7b90800000000000000
+      internalID: -7242268612615422524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_149
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3979ce811980e5450800000000000000
+      internalID: 6079305966278186899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_150
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c4afe1f5ed1a100800000000000000
+      internalID: 117619565411323014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_151
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1950
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859e965492f14ad70800000000000000
+      internalID: 9053395413040228696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_152
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c83da4a00192630800000000000000
+      internalID: 3902668188484340742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_153
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0502aca15a7d16be0800000000000000
+      internalID: -1485669297936523184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_154
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527008701cfde8900800000000000000
+      internalID: 688733813181777701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_155
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1800
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc16724621a8b83f0800000000000000
+      internalID: -897471889135935028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e69ff11218e6ea60800000000000000
+      internalID: 7703099376972830434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_157
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2783359e5664040800000000000000
+      internalID: 4631501319595127547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_158
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99db705f830c53be0800000000000000
+      internalID: -1498079950169195111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_159
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1650
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e69e4ffd8a417630800000000000000
+      internalID: 3922998724150597349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2886c023aad124460800000000000000
+      internalID: 7224369369077016706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_161
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3648d4827d7c32790800000000000000
+      internalID: -7555976022889495453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_162
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6c3835e3ab486f0800000000000000
+      internalID: -683216466601589030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_163
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1500
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27fc2f3b78a8aa80800000000000000
+      internalID: -8455323053093750995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_164
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa11c688c48adcd80800000000000000
+      internalID: -8228735897476263510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_165
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddabab5a5dffbce80800000000000000
+      internalID: -8157145006977926435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_166
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3beef124d9ce9440800000000000000
+      internalID: 4944611353839987516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_167
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1350
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1445f701e5f6a20800000000000000
+      internalID: 3057766096956572146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3dec0097e935400800000000000000
+      internalID: 311767041760482247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_169
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce5d933c9c12baf0800000000000000
+      internalID: -382211561166643513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_170
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78088277ae2f76750800000000000000
+      internalID: 6298269692736340103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_171
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1200
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4c12ba6b03b4120800000000000000
+      internalID: 2399064787618219173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_172
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad14af55604bf5a0800000000000000
+      internalID: -6486520034156601943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_173
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a62c18496223fb0800000000000000
+      internalID: -4669627444355765670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_174
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6598774cd082e86b0800000000000000
+      internalID: -5292248472517899946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_175
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1050
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d28d1ecf868e4cc0800000000000000
+      internalID: -3724891889592335662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f849e71d9c16c00800000000000000
+      internalID: 892216102805081942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_177
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bc2fd26439ccfb0800000000000000
+      internalID: -4626160787588461730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_178
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a30b75185188b890800000000000000
+      internalID: -7442056168912256089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_179
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 900
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbfc6370edf82ab50800000000000000
+      internalID: 6602998187445112767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f540292ef96cacb0800000000000000
+      internalID: -4851386158252276238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_181
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865a5238213cee700800000000000000
+      internalID: 571608686999741800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_182
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daef49a20b76d8550800000000000000
+      internalID: 6164697471266389677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_183
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 750
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1b99db7abbbd5a0800000000000000
+      internalID: -6495391708436909610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_184
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5decd9813c7ac7640800000000000000
+      internalID: 5079118936140533461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_185
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379ee4470e78cd850800000000000000
+      internalID: 6403142168307755379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_186
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8973b38d7cafbe0c0800000000000000
+      internalID: -4545263662667188328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_187
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3463707659d2c5f30800000000000000
+      internalID: 4565574241948743235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_188
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f086849f8469078b0800000000000000
+      internalID: -5156456333175134193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_189
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32faa7253996f0ba0800000000000000
+      internalID: -6120557287108333789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_190
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7eb20adfda3ca20800000000000000
+      internalID: 3081497874877114310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_191
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 450
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219dbeca0b8fe04b0800000000000000
+      internalID: -5472163059509503726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_192
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7c3fbf5c9654fa0800000000000000
+      internalID: -5817127044622596169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_193
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a567c3678edc4fe0800000000000000
+      internalID: -1203342327338801751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_194
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0248b8e316c3e9b10800000000000000
+      internalID: 1990094473703162912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_195
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 300
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043537e6e05f71e20800000000000000
+      internalID: 3321392692540429120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_196
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30b7bb9357bc58b0800000000000000
+      internalID: -5162049503150755778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_197
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6b1d590fec51250800000000000000
+      internalID: 5914861218322036440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_198
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8679d98d8dec0a770800000000000000
+      internalID: 8620117117529593704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_199
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 150
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cf34e0b47a06ea0800000000000000
+      internalID: -5881517172542145399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127b064b7a21d5b00800000000000000
+      internalID: 818831218746373921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_201
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd09bcae2fffbaa50800000000000000
+      internalID: 6533597103217414364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrestCrop_202
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 200
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ce1b3018df82480800000000000000
+      internalID: -8923603931080037373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5784b837f618c8f4b9120a436775ca84
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
