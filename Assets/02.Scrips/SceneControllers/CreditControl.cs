@@ -36,7 +36,8 @@ public class CreditControl : MonoBehaviour, IFadeProcess
             yield return null;
         }
         yield return new WaitForSeconds(0.2f);
-        LoadingControl.LoadSceneWithLoading("Main");
+        SceneManager.LoadScene("Main");
+        
     }
 
 
@@ -64,7 +65,7 @@ public class CreditControl : MonoBehaviour, IFadeProcess
             yield return new WaitForSeconds(0.01f);
         }
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         
         StartCoroutine(flickerCr());
     }
@@ -76,7 +77,7 @@ public class CreditControl : MonoBehaviour, IFadeProcess
         int isFlickerMax = 0;
         while (1.0f > timeProgress)
         {
-            timeProgress += 0.1f;
+            timeProgress += 0.2f;
 
             toFlicker.alpha = isFlickerMax;
             if (isFlickerMax == 1)
@@ -86,6 +87,7 @@ public class CreditControl : MonoBehaviour, IFadeProcess
             else isFlickerMax = 1;
             yield return new WaitForSeconds(0.15f);
         }
+        toFlicker.alpha = 1;
         isReady = true;
     }
 

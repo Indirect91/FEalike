@@ -11,9 +11,11 @@ public class LoadingControl : MonoBehaviour
     
     [SerializeField] 
     private Sprite[] loadingImgSprites;
-    [SerializeField]
     private int index = 0;
-    private float timer = 0;
+    float fakeLoadAmount = 0.0f;
+
+    [SerializeField]
+    private Image loadingBarImg;
 
 
     static string sceneToLoad;
@@ -25,68 +27,40 @@ public class LoadingControl : MonoBehaviour
 
     IEnumerator SceneLoadProgress()
     {
+        index = 0;
+        fakeLoadAmount = 0;
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
         asyncOperation.allowSceneActivation = false;
-        float toTest = 0.0f;
 
-        float indexScale = (float)loadingImgSprites.Length / 0.9f;
-        
         while(index< loadingImgSprites.Length)
         {
-            if (asyncOperation.progress < 0.9 && toTest * indexScale < index + 1)
-            //if (asyncOperation.progress<0.9 && asyncOperation.progress*indexScale<index+1)
-            {
-                Debug.Log(toTest);
-                Debug.Log(index);
-                toTest += 0.1f;
-                Debug.Assert(true); //toFix
-                // yield return new WaitForSeconds(0.5f);
-                yield return new WaitForSeconds(0.5f);
-
-            }
-            else if(asyncOperation.progress < 0.9 && asyncOperation.progress * indexScale > index + 1)
-            {
-                index++;
-                //Debug.Log(asyncOperation.progress * indexScale);
-                yield return new WaitForSeconds(0.5f);
-            }
-
-            
-            loadingTxt.text = ((float)index * 90.0f / (float)loadingImgSprites.Length).ToString("00.00");
             loadingImg.sprite = loadingImgSprites[index];
-           // yield return new WaitForSeconds(0.05f);
-        }
-
-
-        if (asyncOperation.isDone == false)
-        {
-            while (asyncOperation.isDone == false)
+            if (Random.Range(0, 3) == 0)
             {
-                //   loadingImg.sprite = loadingImgSprites[index];
-                //   index = (index + 1) % loadingImgSprites.Length;
-
-
-
-                //yield return new WaitForSeconds(0.01f);
-                yield return null;
-                if (asyncOperation.progress < 0.9f)
-                {
-                    loadingTxt.text = (asyncOperation.progress * 100).ToString("00.00");
-                }
-                else
-                {
-                    timer += Time.unscaledDeltaTime;
-                    loadingTxt.text = asyncOperation.progress.ToString();
-                    if (timer > 1.0f)
-                    {
-                        asyncOperation.allowSceneActivation = true;
-                        yield break;
-                    }
-                }
+                fakeLoadAmount = (float)index + Random.Range(0.00f, 0.99f); 
             }
-            asyncOperation.allowSceneActivation = true;
-            yield break;
+            
+            loadingTxt.text = fakeLoadAmount.ToString("0.00") + "%";
+            loadingBarImg.fillAmount = fakeLoadAmount / 100;
+            index++;
+            yield return new WaitForSeconds(0.05f);
         }
+
+        while (asyncOperation.isDone == false && asyncOperation.progress < 0.9f)
+        {
+            yield return null;
+              fakeLoadAmount = loadingImgSprites.Length + asyncOperation.progress * (100 -loadingImgSprites.Length) / 0.9f ;
+            loadingTxt.text = fakeLoadAmount.ToString("0.00") + "%";
+            loadingBarImg.fillAmount = fakeLoadAmount / 100;
+        }
+        loadingTxt.text = "99.99%";
+        loadingBarImg.fillAmount = 1;
+        yield return new WaitForSeconds(0.5f);
+        loadingTxt.text = "Load Complete!";
+        yield return new WaitForSeconds(0.5f);
+        asyncOperation.allowSceneActivation = true;
+        yield break;
+        
     }
 
     void Start()
