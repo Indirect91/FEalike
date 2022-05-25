@@ -97,6 +97,7 @@ public class CreditControl : MonoBehaviour, IFadeProcess
         //if(FadeManager.sceneStatus == FadeManager.SceneStatus.None && isReady&&Input.GetKeyDown(KeyCode.Return))
         if (isReady && Input.GetKeyDown(KeyCode.Return))
         {
+            isReady = false;
             GameManager.instance.OnFadeInOut(new WaitForSeconds(0.01f), FadeManager.SceneStatus.FadeOut);
         }
         else if(!isReady && Input.anyKey)
