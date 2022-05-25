@@ -30,17 +30,12 @@ public class Stage0 : StageBase
     private EventSystem eventSystem;
     private GameObject prevSelected;
     private string inputStream;
-    private CanvasGroup plainBlack;
-    
 
 
-    // Start is called before the first frame update
     void Start()
     {
         // GameManager.instance.currentPhase = GameManager.CurrentPhase.newGame;
 
-        plainBlack = GameObject.Find("PlainBlack").GetComponent<CanvasGroup>();
-        plainBlack.alpha = 1.0f;
         phasePanels = new Dictionary<string, GameObject>();
         phasePanels.Add("IntroPhase", introPhase);
         phasePanels.Add("AskNamePhase",askNamePhase);
@@ -51,7 +46,8 @@ public class Stage0 : StageBase
         isVideoEnded = false;
         inputStream = "";
 
-        StartCoroutine(FadeIn(Stage0Phase.IntroPhase));
+        GameManager.instance.OnFadeInOut(new WaitForSeconds(0.01f), FadeManager.SceneStatus.FadeIn);
+        //StartCoroutine(FadeIn(Stage0Phase.IntroPhase));
     }
 
     //▼팝업 UI 버튼에 연결시킬 함수
@@ -87,16 +83,12 @@ public class Stage0 : StageBase
     }
 
     //▼페이드 아웃 후 전환할 씬을 인자로 받는 코루틴
-    IEnumerator AllfadeOut(Stage0Phase nextPhase)
+    public override IEnumerator AllFadeOut(WaitForSeconds waitTime)
     {
         var toClose = stage0curPhase;
         stage0curPhase = Stage0Phase.SceneChanging;
-        while(plainBlack.alpha<1)
-        {
-            plainBlack.alpha += 0.02f;
+        Debug.Assert(true);//tofix
 
-            yield return new WaitForSeconds(0.01f) ;
-        }
         GameObject.Find(toClose.ToString()).SetActive(false);
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(FadeIn(nextPhase));
@@ -182,6 +174,15 @@ public class Stage0 : StageBase
     void VideoEndCheck(UnityEngine.Video.VideoPlayer videoPlayer)
     {
         isVideoEnded = true;
-        Debug.Log("비디오끝");
+    }
+
+    public override IEnumerator AllFadeOut(WaitForSeconds waitTime)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override IEnumerator AllFadeIn(WaitForSeconds waitTime)
+    {
+        throw new System.NotImplementedException();
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IFadeProcess
 {
+    IEnumerator AllFadeIn(WaitForSeconds waitTime);
     IEnumerator AllFadeOut(WaitForSeconds waitTime);
 }
 
@@ -56,6 +57,29 @@ public class FadeManager : MonoBehaviour
         }
         sceneStatus = SceneStatus.SceneReady;
     }
+
+    //▼같은 씬 내에서 짧은 전환 표현시
+    //public IEnumerator FadeInShort(WaitForSeconds waitTime)
+    //{
+    //    sceneStatus = SceneStatus.FadeIn;
+    //    while (plainPanelCG.alpha < 1)
+    //    {
+    //        plainPanelCG.alpha += GameManager.fadeSync;
+    //        yield return waitTime;
+    //    }
+    //    sceneStatus = SceneStatus.SceneReady;
+    //}
+    //public IEnumerator FadeOutShort(WaitForSeconds waitTime)
+    //{
+    //    sceneStatus = SceneStatus.FadeOut;
+    //    while (plainPanelCG.alpha < 1)
+    //    {
+    //        plainPanelCG.alpha += GameManager.fadeSync;
+    //        yield return waitTime;
+    //    }
+    //    sceneStatus = SceneStatus.SceneReady;
+    //}
+
 
     private void OnEnable()
     {

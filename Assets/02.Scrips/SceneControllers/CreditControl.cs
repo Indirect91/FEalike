@@ -110,4 +110,10 @@ public class CreditControl : MonoBehaviour, IFadeProcess
             moveSpeed = 2.0f;
         }
     }
+
+    public IEnumerator AllFadeIn(WaitForSeconds waitTime)
+    {
+        //크레딧 씬만의 특별한 페이드인이 없으니 미구현
+        yield return null;
+    }
 }

@@ -53,15 +53,13 @@ public class TitleControl : MonoBehaviour, IFadeProcess
     private void OnEnable()
     {
         //켜질때, 현 씬만의 페이드인아웃용 코루틴을 게임매니져 이벤트에 등록
-        GameManager.FadeInEvent += BackgroundFadein;
+        GameManager.FadeInEvent += AllFadeIn;
         GameManager.FadeOutEvent += AllFadeOut;
-
-        SoundManager.instance.PlayBGM(SoundManager.instance.Bgm.titleBGM);
     }
 
     private void OnDisable()
     {
-        GameManager.FadeInEvent -= BackgroundFadein;
+        GameManager.FadeInEvent -= AllFadeIn;
         GameManager.FadeOutEvent -= AllFadeOut;
     }
 
@@ -178,7 +176,7 @@ public class TitleControl : MonoBehaviour, IFadeProcess
     }
 
     //▼ 백그라운드 먼저 밝아지게 할 코루틴
-    IEnumerator BackgroundFadein(WaitForSeconds waitTime)
+    public IEnumerator AllFadeIn(WaitForSeconds waitTime)
     {
         //▼ 페이드인이 완료될때까진 일단 대기
         while (FadeManager.sceneStatus != FadeManager.SceneStatus.SceneReady)
@@ -224,5 +222,8 @@ public class TitleControl : MonoBehaviour, IFadeProcess
         rotationCr = ButtonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
         StartCoroutine(rotationCr);
         GameManager.instance.OnFadeInOut(new WaitForSeconds(0.01f), FadeManager.SceneStatus.FadeIn);
+        SoundManager.instance.PlayBGM(SoundManager.instance.Bgm.titleBGM);
     }
+
+
 }

@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StageBase : MonoBehaviour
+abstract public class StageBase : MonoBehaviour, IFadeProcess
 {
-    // Start is called before the first frame update
-    void Start()
+    public abstract IEnumerator AllFadeIn(WaitForSeconds waitTime);
+    public abstract IEnumerator AllFadeOut(WaitForSeconds waitTime);
+
+    private void OnEnable()
     {
-        
+        GameManager.FadeInEvent += AllFadeIn;
+        GameManager.FadeOutEvent += AllFadeOut;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        GameManager.FadeInEvent -= AllFadeIn;
+        GameManager.FadeOutEvent -= AllFadeOut;
     }
 }
