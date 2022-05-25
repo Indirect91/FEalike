@@ -38,10 +38,6 @@ public class TitleControl : MonoBehaviour, IFadeProcess
         isSelectInitiated = false;
         titleUICG.alpha = 0.0f;
         
-
-        rotationCr =  ButtonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
-        StartCoroutine(rotationCr);
-        
         if(GameManager.instance.gameData.isSavefileExists==false)
         {
 
@@ -59,7 +55,6 @@ public class TitleControl : MonoBehaviour, IFadeProcess
         //켜질때, 현 씬만의 페이드인아웃용 코루틴을 게임매니져 이벤트에 등록
         GameManager.FadeInEvent += BackgroundFadein;
         GameManager.FadeOutEvent += AllFadeOut;
-        GameManager.instance.OnFadeInOut(new WaitForSeconds(0.01f), FadeManager.SceneStatus.FadeIn);
 
         SoundManager.instance.PlayBGM(SoundManager.instance.Bgm.titleBGM);
     }
@@ -171,7 +166,14 @@ public class TitleControl : MonoBehaviour, IFadeProcess
     {
         if(isReadyToChange)
         {
-            SceneManager.LoadScene(selectedName);
+            if (selectedName == "Credit")
+            {
+                SceneManager.LoadScene(selectedName);
+            }
+            else
+            {
+                LoadingControl.LoadSceneWithLoading(selectedName);
+            }
         }
     }
 
@@ -216,5 +218,11 @@ public class TitleControl : MonoBehaviour, IFadeProcess
         {
             SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.pickSFX);
         }
+    }
+    private void Start()
+    {
+        rotationCr = ButtonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
+        StartCoroutine(rotationCr);
+        GameManager.instance.OnFadeInOut(new WaitForSeconds(0.01f), FadeManager.SceneStatus.FadeIn);
     }
 }

@@ -43,7 +43,7 @@ public class LoadingControl : MonoBehaviour
             loadingTxt.text = fakeLoadAmount.ToString("0.00") + "%";
             loadingBarImg.fillAmount = fakeLoadAmount / 100;
             index++;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.08f);
         }
 
         while (asyncOperation.isDone == false && asyncOperation.progress < 0.9f)
