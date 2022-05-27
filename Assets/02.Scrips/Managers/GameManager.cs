@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public delegate IEnumerator FadeHandler(WaitForSeconds waitTime);
     public static event FadeHandler FadeInEvent;
     public static event FadeHandler FadeOutEvent;
-    public static float fadeSync = 0.01f;
+    public static float fadeSync = 0.1f;
 
 
     //▼ 게임매니져 싱글톤으로 유지

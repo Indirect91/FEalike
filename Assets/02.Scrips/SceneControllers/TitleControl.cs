@@ -175,7 +175,8 @@ public class TitleControl : MonoBehaviour, IFadeProcess
                 {
                     selectedName = "Stage0";
                 }
-                LoadingControl.LoadSceneWithLoading(selectedName);
+                //LoadingControl.LoadSceneWithLoading(selectedName); //Release
+                SceneManager.LoadScene(selectedName); //Debug
             }
         }
     }

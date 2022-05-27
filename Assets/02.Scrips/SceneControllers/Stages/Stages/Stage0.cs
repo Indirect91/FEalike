@@ -172,9 +172,13 @@ public class Stage0 : StageBase
                 break;
 
             case StagePhase.TalkPhase:
+
+
+
+
                 break;
             case StagePhase.BlackOut:
-
+                
                 break;
             default:
                 
