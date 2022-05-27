@@ -21,8 +21,12 @@ public class BGMCollection
 }
 
 [RequireComponent(typeof(AudioSource))]
+
 public class SoundManager : MonoBehaviour
 {
+    public enum SoundType
+    {BGM, SFX}
+
     public static SoundManager instance = null;
 
     public UISFXCollection UISfx;
@@ -30,7 +34,7 @@ public class SoundManager : MonoBehaviour
     private float currentVolume;
     private float maxVolume; //TODO: 나중에 사운드 옵션 넣을거라면 그때 사용하기
     [HideInInspector]
-    private AudioSource audioSource;
+    private AudioSource[] audioSources;
 
     //▼싱글톤화
     private void Awake()
@@ -44,7 +48,8 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        audioSource = GetComponent<AudioSource>();
+        
+        audioSources = GetComponents<AudioSource>();
     }
 
     void OnEnable()
@@ -59,15 +64,32 @@ public class SoundManager : MonoBehaviour
         GameManager.FadeOutEvent -= BgmFadeOut;
     }
 
-    public void PlayBGM(AudioClip toPlay)
+    public void Play(AudioClip toPlay, SoundType type, float vol = 1.0f)
     {
-        audioSource.clip = toPlay;
-        audioSource.Play();
+        var determinedSource = audioSources[(int)type];
+        determinedSource.volume = vol;
+        switch (type)
+        {
+            case SoundType.BGM:
+                if(determinedSource.isPlaying ==true)
+                {
+                    determinedSource.Stop();
+                }
+                determinedSource.clip = toPlay;
+                determinedSource.Play();
+                break;
+            case SoundType.SFX:
+                determinedSource.PlayOneShot(toPlay);
+                break;
+        }
     }
 
-    public void PlaySfx(AudioClip toPlay)
+    public void Stop()
     {
-        audioSource.PlayOneShot(toPlay);
+        if(audioSources[0].isPlaying==true)
+        {
+            audioSources[0].Stop();
+        }
     }
 
     public IEnumerator BgmFadeIn(WaitForSeconds fadeTime)
@@ -76,21 +98,24 @@ public class SoundManager : MonoBehaviour
         while (currentVolume < 1.0f)
         {
             currentVolume += GameManager.fadeSync;
-            audioSource.volume = currentVolume;
+            audioSources[0].volume = currentVolume;
             yield return fadeTime;
         }
-        audioSource.volume = 1.0f;
+        audioSources[0].volume = 1.0f;
     }
 
     public IEnumerator BgmFadeOut(WaitForSeconds waitTime)
     {
-        currentVolume = 1.0f;
-        while (currentVolume > 0.0f)
+        if (audioSources[0].isPlaying)
         {
-            currentVolume -= GameManager.fadeSync;
-            audioSource.volume = currentVolume;
-            yield return waitTime;
+            currentVolume = 1.0f;
+            while (currentVolume > 0.0f)
+            {
+                currentVolume -= GameManager.fadeSync;
+                audioSources[0].volume = currentVolume;
+                yield return waitTime;
+            }
+            audioSources[0].volume = 0.0f;
         }
-        audioSource.volume = 0.0f;
     }
 }

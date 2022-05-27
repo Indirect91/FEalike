@@ -65,7 +65,6 @@ public class LoadingControl : MonoBehaviour
 
     void Start()
     {
-        
         StartCoroutine(SceneLoadProgress());
     }
 

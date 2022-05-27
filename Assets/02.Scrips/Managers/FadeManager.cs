@@ -15,7 +15,7 @@ public class FadeManager : MonoBehaviour
     public enum SceneStatus
     {
         //페이드인, 아웃, 씬사용준비, 아웃과 인 사이 혹은 로딩
-        FadeIn, FadeOut, SceneReady, None
+        FadeIn, FadeOut, SceneReady, FadeShortStandby ,None
     }
     
     public static SceneStatus sceneStatus = SceneStatus.None;
@@ -55,30 +55,30 @@ public class FadeManager : MonoBehaviour
             plainPanelCG.alpha += GameManager.fadeSync;
             yield return waitTime;
         }
-        sceneStatus = SceneStatus.SceneReady;
+        sceneStatus = SceneStatus.None;
     }
 
     //▼같은 씬 내에서 짧은 전환 표현시
-    //public IEnumerator FadeInShort(WaitForSeconds waitTime)
-    //{
-    //    sceneStatus = SceneStatus.FadeIn;
-    //    while (plainPanelCG.alpha < 1)
-    //    {
-    //        plainPanelCG.alpha += GameManager.fadeSync;
-    //        yield return waitTime;
-    //    }
-    //    sceneStatus = SceneStatus.SceneReady;
-    //}
-    //public IEnumerator FadeOutShort(WaitForSeconds waitTime)
-    //{
-    //    sceneStatus = SceneStatus.FadeOut;
-    //    while (plainPanelCG.alpha < 1)
-    //    {
-    //        plainPanelCG.alpha += GameManager.fadeSync;
-    //        yield return waitTime;
-    //    }
-    //    sceneStatus = SceneStatus.SceneReady;
-    //}
+    public IEnumerator FadeInShort(WaitForSeconds waitTime)
+    {
+        sceneStatus = SceneStatus.FadeIn;
+        while (plainPanelCG.alpha > 0)
+        {
+            plainPanelCG.alpha -= GameManager.fadeSync;
+            yield return waitTime;
+        }
+        sceneStatus = SceneStatus.SceneReady;
+    }
+    public IEnumerator FadeOutShort(WaitForSeconds waitTime)
+    {
+        sceneStatus = SceneStatus.FadeOut;
+        while (plainPanelCG.alpha < 1)
+        {
+            plainPanelCG.alpha += GameManager.fadeSync;
+            yield return waitTime;
+        }
+        sceneStatus = SceneStatus.FadeShortStandby;
+    }
 
 
     private void OnEnable()

@@ -68,7 +68,7 @@ public class TitleControl : MonoBehaviour, IFadeProcess
     {
         if (isInteractable == true)
         {
-            SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.selectSFX);
+            SoundManager.instance.Play(SoundManager.instance.UISfx.selectSFX, SoundManager.SoundType.SFX);
             isInteractable = false;
             selectedName = eventSystem.currentSelectedGameObject.name;
             StopCoroutine(rotationCr); //아까 저장해둔 밝았다가 어두워지는 코루틴 멈춤
@@ -88,6 +88,7 @@ public class TitleControl : MonoBehaviour, IFadeProcess
         {
             yield return null;
         }
+        SoundManager.instance.Stop();
         yield return new WaitForSeconds(0.2f);
         isReadyToChange = true;
     }
@@ -170,6 +171,10 @@ public class TitleControl : MonoBehaviour, IFadeProcess
             }
             else
             {
+                if (selectedName == "NewGame")
+                {
+                    selectedName = "Stage0";
+                }
                 LoadingControl.LoadSceneWithLoading(selectedName);
             }
         }
@@ -214,7 +219,7 @@ public class TitleControl : MonoBehaviour, IFadeProcess
     {
         if (FadeManager.sceneStatus == FadeManager.SceneStatus.SceneReady)
         {
-            SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.pickSFX);
+            SoundManager.instance.Play(SoundManager.instance.UISfx.pickSFX, SoundManager.SoundType.SFX);
         }
     }
     private void Start()
@@ -222,7 +227,7 @@ public class TitleControl : MonoBehaviour, IFadeProcess
         rotationCr = ButtonAlphaRotation(); //추후 수동으로 끄기 위해 변수에 담음
         StartCoroutine(rotationCr);
         GameManager.instance.OnFadeInOut(new WaitForSeconds(0.01f), FadeManager.SceneStatus.FadeIn);
-        SoundManager.instance.PlayBGM(SoundManager.instance.Bgm.titleBGM);
+        SoundManager.instance.Play(SoundManager.instance.Bgm.titleBGM, SoundManager.SoundType.BGM);
     }
 
 

@@ -8,23 +8,14 @@ using UnityEngine.SceneManagement;
 
 public class Stage0 : StageBase
 {
-    //▼스테이지0에서만 사용할 열거형
-    private enum Stage0Phase
-    {
-        IntroPhase, AskNamePhase, UserYesNoStandby, SceneChanging,None
-    }
-
-    public GameObject popUpPrefab;
+    
     public VideoPlayer introVideo;
     private bool isVideoEnded;
 
-    private Stage0Phase stage0curPhase = Stage0Phase.IntroPhase;
-    private Stage0Phase stage0prevPhase = Stage0Phase.None;
     private Dictionary<string, GameObject> phasePanels;
-    public GameObject introPhase;
-    public GameObject askNamePhase;
+    [SerializeField] private GameObject videoPhase;
+    [SerializeField] private GameObject talkPhase;
     
-
 
     //▼UI 이벤트용
     private EventSystem eventSystem;
@@ -34,36 +25,34 @@ public class Stage0 : StageBase
 
     void Start()
     {
-        // GameManager.instance.currentPhase = GameManager.CurrentPhase.newGame;
-
+        curPhase = StagePhase.Init;
+        prvPhase = StagePhase.Init;
         phasePanels = new Dictionary<string, GameObject>();
-        phasePanels.Add("IntroPhase", introPhase);
-        phasePanels.Add("AskNamePhase",askNamePhase);
+        phasePanels.Add("VideoPhase", videoPhase);
+        phasePanels.Add("TalkPhase", talkPhase);
 
         eventSystem = EventSystem.current;
-        stage0curPhase = Stage0Phase.SceneChanging;
         introVideo.loopPointReached += VideoEndCheck; //비디오 종료 확인용
         isVideoEnded = false;
         inputStream = "";
 
         GameManager.instance.OnFadeInOut(new WaitForSeconds(0.01f), FadeManager.SceneStatus.FadeIn);
-        //StartCoroutine(FadeIn(Stage0Phase.IntroPhase));
     }
 
     //▼팝업 UI 버튼에 연결시킬 함수
     public void GetPressedInput(GameObject toDestroy)
     {
         inputStream = eventSystem.currentSelectedGameObject.name;
-        stage0curPhase = stage0prevPhase; 
+        ChangePhase(prvPhase);
         Destroy(toDestroy); //버튼이 눌린 후엔 팝업창 제거
     }
 
     //▼팝업창 띄우는 프리팹 생성 및 멘트
     public void AskConfirmation(string whatToAsk)
     {
-        SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.uiPopupSFX);
+        SoundManager.instance.Play(SoundManager.instance.UISfx.uiPopupSFX, SoundManager.SoundType.SFX);
         var confirmPopup = Instantiate(popUpPrefab);
-        confirmPopup.transform.SetParent(GameObject.Find(stage0curPhase.ToString()).transform,false);
+        confirmPopup.transform.SetParent(GameObject.Find(curPhase.ToString()).transform,false);
         confirmPopup.GetComponentInChildren<Text>().text = whatToAsk;
 
         var buttons = confirmPopup.GetComponentsInChildren<Button>();
@@ -76,97 +65,56 @@ public class Stage0 : StageBase
             }
             buttons[i].onClick.AddListener(delegate {GetPressedInput(confirmPopup);});
         }
-        stage0prevPhase = stage0curPhase;
 
-        stage0curPhase = Stage0Phase.UserYesNoStandby;
+        ChangePhase(StagePhase.YesNoStandby);
+    }
+    
+    IEnumerator shortFadeOut(StagePhase nextPhase, AudioClip changedBGM)
+    {
+        StartCoroutine(SoundManager.instance.BgmFadeOut(new WaitForSeconds(0.01f)));
+        StartCoroutine(FadeManager.instance.FadeOutShort(new WaitForSeconds(0.01f)));
+        while (FadeManager.sceneStatus != FadeManager.SceneStatus.FadeShortStandby)
+        {
+            yield return null;
+        }
+        GameObject.Find(curPhase.ToString()).SetActive(false);
+        ChangePhase(StagePhase.BlackOut);
+        yield return new WaitForSeconds(0.5f);
 
+        StartCoroutine(shortFadeIn(nextPhase, changedBGM));
+    }
+
+    IEnumerator shortFadeIn(StagePhase nextPhase, AudioClip changedBGM)
+    {
+        SoundManager.instance.Play(changedBGM, SoundManager.SoundType.BGM);
+        StartCoroutine(SoundManager.instance.BgmFadeIn(new WaitForSeconds(0.01f)));
+        StartCoroutine(FadeManager.instance.FadeInShort(new WaitForSeconds(0.01f)));
+        phasePanels[nextPhase.ToString()].SetActive(true);
+        
+        ChangePhase(nextPhase);
+        yield return null;
     }
 
     //▼페이드 아웃 후 전환할 씬을 인자로 받는 코루틴
     public override IEnumerator AllFadeOut(WaitForSeconds waitTime)
     {
-        var toClose = stage0curPhase;
-        stage0curPhase = Stage0Phase.SceneChanging;
-        Debug.Assert(true);//tofix
-
-        GameObject.Find(toClose.ToString()).SetActive(false);
+        Debug.Assert(true); //TODO
         yield return new WaitForSeconds(0.5f);
-        StartCoroutine(FadeIn(nextPhase));
+
     }
 
-    IEnumerator FadeIn(Stage0Phase nextPhase)
+    public override IEnumerator AllFadeIn(WaitForSeconds waitTime)
     {
-        phasePanels[nextPhase.ToString()].SetActive(true);
-        while (plainBlack.alpha > 0)
-        {
-            plainBlack.alpha -= 0.02f;
-
-            yield return new WaitForSeconds(0.01f);
-        }
-        stage0curPhase = nextPhase;
+        ChangePhase(StagePhase.VideoPhase);
+        yield return null;
     }
 
 
     void Update()
     {
-        //▼페이즈에 따른 현재 행동 결정
-        switch (stage0curPhase)
-        {
-            //▼비디오 재생중 일시정지, 스킵 행동 가능
-            case Stage0Phase.IntroPhase:
-            {
-                //▼인트로 페이즈 도중 스킵창이 떳을경우
-                if (Input.anyKeyDown && inputStream=="")
-                    {
-                        introVideo.Pause();
-                        AskConfirmation("스킵하시겠습니까?");
-                    }
-                else if(inputStream =="YesBtn")
-                    {
-                        SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.pickSFX);
-                        inputStream = "";
-                        StartCoroutine(AllfadeOut(Stage0Phase.AskNamePhase));
-                    }
-                else if(inputStream =="NoBtn")
-                    {
-                        SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.cancelSFX);
-                        introVideo.Play();
-                        inputStream = "";
-
-                    }
-                else if(isVideoEnded==true)
-                    {
-                        StartCoroutine(AllfadeOut(Stage0Phase.AskNamePhase));
-                        stage0curPhase = Stage0Phase.AskNamePhase;
-                        
-                    }
-            }
-            break;
-            
-            //▼유저가 선택중일땐 Yes, No 이외의 장소를 클릭하지 못하게 막아둠
-            case Stage0Phase.UserYesNoStandby:
-                if(Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.LeftArrow))
-                {
-                    SoundManager.instance.PlaySfx(SoundManager.instance.UISfx.chooseSFX);
-                    prevSelected = eventSystem.currentSelectedGameObject;
-                }
-                if(eventSystem.currentSelectedGameObject==null)
-                {
-                    eventSystem.SetSelectedGameObject(prevSelected);
-                }
-                break;
-
-            //▼화면 전환 사이엔 입력을 막아둠
-            case Stage0Phase.SceneChanging:
-                break;
-            case Stage0Phase.AskNamePhase:
-
-
-                break;
-            default:
-                Debug.Log(stage0curPhase);
-                SceneManager.LoadScene("Main");
-                break;
+        if(FadeManager.sceneStatus == FadeManager.SceneStatus.SceneReady)
+        { 
+            ActionPhase();
         }
     }
 
@@ -176,13 +124,63 @@ public class Stage0 : StageBase
         isVideoEnded = true;
     }
 
-    public override IEnumerator AllFadeOut(WaitForSeconds waitTime)
+    protected override void ActionPhase()
     {
-        throw new System.NotImplementedException();
-    }
+        //▼페이즈에 따른 현재 행동 결정
+        switch (curPhase)
+        {
+            //▼비디오 재생중 일시정지, 스킵 행동 가능
+            case StagePhase.VideoPhase:
+                {
+                    //▼인트로 페이즈 도중 스킵창이 떳을경우
+                    if (Input.anyKeyDown && inputStream == "")
+                    {
+                        introVideo.Pause();
+                        AskConfirmation("스킵하시겠습니까?");
+                    }
+                    else if (inputStream == "YesBtn")
+                    {
+                        SoundManager.instance.Play(SoundManager.instance.UISfx.pickSFX, SoundManager.SoundType.SFX);
+                        StartCoroutine(shortFadeOut(StagePhase.TalkPhase, SoundManager.instance.Bgm.talkBGM));
+                        inputStream = "";
+                    }
+                    else if (inputStream == "NoBtn")
+                    {
+                        SoundManager.instance.Play(SoundManager.instance.UISfx.cancelSFX, SoundManager.SoundType.SFX);
+                        introVideo.Play();
+                        inputStream = "";
 
-    public override IEnumerator AllFadeIn(WaitForSeconds waitTime)
-    {
-        throw new System.NotImplementedException();
+                    }
+                    else if (isVideoEnded == true)
+                    {
+                        StartCoroutine(shortFadeOut(StagePhase.TalkPhase, SoundManager.instance.Bgm.talkBGM));
+                    }
+                }
+                break;
+
+            //▼유저가 선택중일땐 Yes, No 이외의 장소를 클릭하지 못하게 막아둠
+            case StagePhase.YesNoStandby:
+                if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    SoundManager.instance.Play(SoundManager.instance.UISfx.chooseSFX, SoundManager.SoundType.SFX);
+                    prevSelected = eventSystem.currentSelectedGameObject;
+                }
+                if (eventSystem.currentSelectedGameObject == null)
+                {
+                    eventSystem.SetSelectedGameObject(prevSelected);
+                }
+                break;
+
+            case StagePhase.TalkPhase:
+                break;
+            case StagePhase.BlackOut:
+
+                break;
+            default:
+                
+                Debug.Assert(true); //문제가 발견될경우 터뜨리기
+                SceneManager.LoadScene("Main");
+                break;
+        }
     }
 }

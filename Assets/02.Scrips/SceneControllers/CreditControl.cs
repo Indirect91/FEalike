@@ -18,7 +18,7 @@ public class CreditControl : MonoBehaviour, IFadeProcess
         GameManager.FadeOutEvent += AllFadeOut;
 
         GameManager.instance.OnFadeInOut(new WaitForSeconds(0.02f), FadeManager.SceneStatus.FadeIn);
-        SoundManager.instance.PlayBGM(SoundManager.instance.Bgm.creditBGM);
+        SoundManager.instance.Play(SoundManager.instance.Bgm.creditBGM, SoundManager.SoundType.BGM);
 
     }
 

@@ -6,15 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public enum CurrentPhase
-    {
-        NewGame,Talk, Travel, Search, Battle
-    }
 
     public static GameManager instance = null;
     public GameDataSO gameData;
-
-    public CurrentPhase currentPhase;
 
     public delegate IEnumerator FadeHandler(WaitForSeconds waitTime);
     public static event FadeHandler FadeInEvent;

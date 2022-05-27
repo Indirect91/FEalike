@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/01.Scenes/Main.unity
     guid: 4e670e19753a11b4dbe12a47cde49b21
   - enabled: 1
-    path: Assets/01.Scenes/Stages/NewGame.unity
+    path: Assets/01.Scenes/Stages/Stage0.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/01.Scenes/Credit.unity
