@@ -172,7 +172,7 @@ public class Stage0 : StageBase
                 break;
 
             case StagePhase.TalkPhase:
-
+                
 
 
 
