@@ -21,23 +21,13 @@ public class TestScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(phase)
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            case 0:
-                cmra.SingleActorZoom(TragetSpeaker);
-
-                break;
-            case 1:
-                cmra.DoubleActorZoom(TragetSpeaker, Myself, CameraManager.CameraMode.ThirdPerson);
-                phase++;                    
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
+            cmra.SingleActorZoom(TragetSpeaker);
         }
-
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            cmra.DoubleActorZoom(TragetSpeaker, Myself, CameraManager.CameraMode.ThirdPerson);
+        }
     }
 }
