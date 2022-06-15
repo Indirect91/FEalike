@@ -25,7 +25,6 @@ public class TestScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
 
-
             Vector3 asd = new Vector3();
             asd = cmra.transform.position - TragetSpeaker.position;
 

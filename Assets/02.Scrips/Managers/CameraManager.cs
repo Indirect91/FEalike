@@ -71,12 +71,19 @@ public class CameraManager : MonoBehaviour
         MainCharacter.LookAt(TargetSpeaker.position);
         TargetSpeaker.LookAt(MainCharacter.position);
 
-        Vector3 middlePoint = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
+        transform.rotation = Quaternion.Euler((TargetSpeaker.rotation.eulerAngles) + new Vector3(0, 114, 0));
 
-        transform.position = middlePoint;
-        transform.LookAt(TargetSpeaker);
-        transform.RotateAround(middlePoint, Vector3.up, -45);
-        //transform.Translate(Vector3.back * 2);
+        
+        transform.position=TargetSpeaker.TransformPoint(new Vector3(-0.24f, 2.85f, -3.32f));
+
+        //Vector3 middlePoint = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
+
+        //transform.position = middlePoint;
+        //transform.LookAt(TargetSpeaker);
+        //transform.RotateAround(middlePoint, Vector3.up, -45);
+        //transform.position= TargetSpeaker.TransformDirection(new Vector3(-.25f,2.85f,-3.32f));
+
+
 
         //transform.position = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
         //temp = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
@@ -86,7 +93,7 @@ public class CameraManager : MonoBehaviour
         //transform.rotation = Quaternion.Euler(MainCharacter.rotation.eulerAngles - new Vector3(0,90.0f,0));
         
         //Vector3 toCal = new Vector3(TargetSpeaker.position.x, 2.85f, TargetSpeaker.position.y);
-        transform.Translate(0,2.85f, -(middlePoint.z - MainCharacter.rotation.z) *1.2f);
+        //transform.Translate(0,2.85f, -(middlePoint.z - MainCharacter.rotation.z) *1.2f);
         //trig = true;
 
 
