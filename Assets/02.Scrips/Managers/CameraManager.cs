@@ -4,19 +4,29 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
+    
     public enum CameraMode
     {
         FirstPerson, ThirdPerson, ThirdPersonSided
     }
 
-    public Vector3 toCalDist;
-    public Vector3 toCalQot;
-    Vector3 initPos;
-    public Vector3 FPoffset;
-    Vector3 TPoffset;
-    bool trig = false;
-    public Vector3 temp = new Vector3();
-    public Vector3 temp2 = new Vector3();
+    Transform playerTr;
+
+
+
+    Vector3 originalPos;
+    Vector3 destinationPos;
+    Quaternion originalRot;
+    Quaternion destinationRot;
+
+    Vector3 velocity;
+    float smoothTime = 0.5f;
+
+
+    public Vector3 TalkFPoffset;
+    public Vector3 TalkTPoffset = new Vector3(0, 2.85f, -2f);
+
+
     public void SmoothTransition()
     {
 
@@ -29,6 +39,11 @@ public class CameraManager : MonoBehaviour
 
     public void SingleActorZoom(Transform TargetSpeaker)
     {
+
+
+
+
+
       //  transform.position = TargetSpeaker.transform.position;
       //  transform.rotation = TargetSpeaker.transform.rotation;
       //
@@ -40,15 +55,6 @@ public class CameraManager : MonoBehaviour
 
         transform.position = new Vector3(-0.08f, 2.81f, -2.01f);
         transform.position = TargetSpeaker.position + new Vector3(1.3f, 2.85f, 1.05f);
-
-        // Debug.Log(FPoffset - TargetSpeaker.position);
-        // Debug.Log("FPOffset:" + FPoffset.ToString());
-        // Debug.Log("TargetPos:" + TargetSpeaker.position);
-        // Debug.Log("Cam:" + this.transform.position);
-        //
-
-        //transform.position = FPoffset;
-        toCalDist = FPoffset - TargetSpeaker.position;
 
 
         //Debug.Log(TargetSpeaker.position + new Vector3(-0.06f, 2.85f, -0.05f));
@@ -62,21 +68,35 @@ public class CameraManager : MonoBehaviour
 
 
         transform.rotation = Quaternion.Euler(new Vector3(0, -0.5f, 0));
-        toCalQot = transform.rotation.eulerAngles - TargetSpeaker.rotation.eulerAngles;
+        
         //transform.position = TargetSpeaker.position + FPoffset;
     }
 
     public void DoubleActorZoom(Transform TargetSpeaker, Transform MainCharacter, CameraMode mode)
     {
-        MainCharacter.LookAt(TargetSpeaker.position);
-        TargetSpeaker.LookAt(MainCharacter.position);
 
-        transform.rotation = Quaternion.Euler((TargetSpeaker.rotation.eulerAngles) + new Vector3(0, 114, 0));
+        Vector3 middlePoint = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
 
-        
-        transform.position=TargetSpeaker.TransformPoint(new Vector3(-0.24f, 2.85f, -3.32f));
 
-        //Vector3 middlePoint = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
+        //transform.rotation = Quaternion.Euler(TargetSpeaker.eulerAngles + new Vector3(0, -45, 0));
+        transform.position = middlePoint + new Vector3(0, 2.851f, 0f); ;
+        var dist = Vector3.Distance(TargetSpeaker.position, middlePoint);
+        //transform.Translate(new Vector3(-dist/3, 0, -dist*1.8f));
+
+        destinationRot = Quaternion.Euler(TargetSpeaker.eulerAngles + new Vector3(0, -45, 0));
+        //destinationPos = middlePoint + 
+        destinationPos=MainCharacter.transform.position + MainCharacter.TransformDirection(new Vector3(-dist / 3, 2.85f, dist*0.8f));
+
+
+
+        //transform.rotation = Quaternion.Euler((TargetSpeaker.rotation.eulerAngles) + new Vector3(0, 114, 0));
+
+
+        //transform.position=TargetSpeaker.TransformPoint(new Vector3(-0.24f, 2.85f, -3.32f));
+
+
+
+
 
         //transform.position = middlePoint;
         //transform.LookAt(TargetSpeaker);
@@ -91,7 +111,7 @@ public class CameraManager : MonoBehaviour
         //Debug.Log(temp);
         //Debug.Log(temp2);
         //transform.rotation = Quaternion.Euler(MainCharacter.rotation.eulerAngles - new Vector3(0,90.0f,0));
-        
+
         //Vector3 toCal = new Vector3(TargetSpeaker.position.x, 2.85f, TargetSpeaker.position.y);
         //transform.Translate(0,2.85f, -(middlePoint.z - MainCharacter.rotation.z) *1.2f);
         //trig = true;
@@ -107,22 +127,24 @@ public class CameraManager : MonoBehaviour
 
     }
 
-
-
     void Start()
     {
-        FPoffset = new Vector3(1.3f, 2.85f, 1.05f);
-        TPoffset = new Vector3(-0.233f, 2.851f, -3.308f);
+        playerTr = GameObject.FindGameObjectWithTag("Player").transform;
+        transform.rotation = playerTr.rotation;
+        transform.position = playerTr.position + playerTr.TransformDirection(TalkTPoffset);
+        //originalPos = destinationPos = transform.position;
+        //originalRot = destinationRot = transform.rotation;
+
+
+        //FPoffset = new Vector3(1.3f, 2.85f, 1.05f);
+        ////Poffset = new Vector3(-0.233f, 2.851f, -3.308f);
+        //TPoffset = new Vector3(0, 2.851f, 0);
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if(trig)
-        {
-            temp.Set(temp.x, 2.85f, temp.z);
-            transform.RotateAround(temp, Vector3.up, 20 * Time.deltaTime);
-            transform.LookAt(temp);
-        }
+       // Vector3.SmoothDamp(transform.position, destinationPos, ref velocity, smoothTime);
+       // transform.rotation = Quaternion.Euler(Vector3.SmoothDamp(transform.rotation.eulerAngles, destinationRot.eulerAngles, ref velocity, smoothTime));
     }
 }

@@ -16,7 +16,7 @@ public class TestScript : MonoBehaviour
     void Start()
     {
         cmra = mainCam.GetComponent<CameraManager>();
-        Myself.transform.rotation = Quaternion.LookRotation(TragetSpeaker.transform.position);
+        //Myself.transform.rotation = Quaternion.LookRotation(TragetSpeaker.transform.position);
     }
 
     // Update is called once per frame

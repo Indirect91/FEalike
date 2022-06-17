@@ -283,6 +283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tana
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 578defed885f25149910427f1035169a, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 578defed885f25149910427f1035169a, type: 3}
 --- !u!4 &403825143 stripped
@@ -466,7 +470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519707413}
   m_LocalRotation: {x: 0, y: -0.20475233, z: 0, w: 0.9788139}
-  m_LocalPosition: {x: 1.2, y: 2.8500001, z: -0.2}
+  m_LocalPosition: {x: 1.15, y: 2.8500001, z: -0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -484,11 +488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e83955c44d3434086747f20551c087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toCalDist: {x: 0, y: 0, z: 0}
-  toCalQot: {x: 0, y: 0, z: 0}
-  FPoffset: {x: 0, y: 0, z: 0}
-  temp: {x: 0, y: 0, z: 0}
-  temp2: {x: 0, y: 0, z: 0}
+  TalkFPoffset: {x: 0, y: 0, z: 0}
+  TalkTPoffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1736861975
 GameObject:
   m_ObjectHideFlags: 0
