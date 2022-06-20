@@ -37,35 +37,12 @@ public class CameraManager : MonoBehaviour
 
     }
 
-    public void SingleActorConversation(Transform TargetSpeaker)
+    public void SingleActorConversation(Transform TargetSpeaker, Blend blendType)
     {
+        curBlend = blendType;
 
-      //  transform.position = TargetSpeaker.transform.position;
-      //  transform.rotation = TargetSpeaker.transform.rotation;
-      //
-      //  transform.Translate(FPoffset);
-
-
-        //transform.Translate(new Vector3(-0.08f, 2.81f, -2.01f));
-
-
-        transform.position = new Vector3(-0.08f, 2.81f, -2.01f);
-        transform.position = TargetSpeaker.position + new Vector3(1.3f, 2.85f, 1.05f);
-
-
-        //Debug.Log(TargetSpeaker.position + new Vector3(-0.06f, 2.85f, -0.05f));
-        //transform.position = TargetSpeaker.position + new Vector3(1.3f, 2.85f, 1.05f);
-        //
-        //Debug.Log(FPoffset - TargetSpeaker.position);
-        //Debug.Log("FPOffset:" + FPoffset.ToString());
-        //Debug.Log("TargetPos:" + TargetSpeaker.position);
-        //Debug.Log("Cam:" + this.transform.position);
-
-
-
-        transform.rotation = Quaternion.Euler(new Vector3(0, -0.5f, 0));
-        
-        //transform.position = TargetSpeaker.position + FPoffset;
+        destinationRot = Quaternion.LookRotation(-TargetSpeaker.forward);
+        destinationPos = TargetSpeaker.position + TargetSpeaker.TransformDirection(TalkFPoffset);
     }
 
     public void DoubleActorConversation(Transform TargetSpeaker, Transform MainCharacter, Blend blendType)
@@ -80,6 +57,8 @@ public class CameraManager : MonoBehaviour
     void Start()
     {
         TalkTPoffset = new Vector3(0, 2.85f, -2f);
+        TalkFPoffset = new Vector3(0, 2.85f, 2f);
+
         playerTr = GameObject.FindGameObjectWithTag("Player").transform;
         transform.rotation = playerTr.rotation;
         transform.position = playerTr.position + playerTr.TransformDirection(TalkTPoffset);
