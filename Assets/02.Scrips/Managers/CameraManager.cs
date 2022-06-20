@@ -25,17 +25,17 @@ public class CameraManager : MonoBehaviour
     Blend curBlend;
     public Vector3 TalkFPoffset;
     public Vector3 TalkTPoffset;
+    public Vector3 MainFPoffset;
 
-
-    public void SmoothTransition()
+    public void MainActorChoosing(Blend blendType)
     {
+        curBlend = blendType;
+
+        destinationPos = playerTr.transform.position + playerTr.TransformDirection(MainFPoffset);
+        destinationRot = (Quaternion.LookRotation(-playerTr.forward)*Quaternion.Euler(0,40,0));
 
     }
 
-    public void SmoothZoom(Vector3 target, float amount, float time )
-    {
-
-    }
 
     public void SingleActorConversation(Transform TargetSpeaker, Blend blendType)
     {
@@ -58,6 +58,7 @@ public class CameraManager : MonoBehaviour
     {
         TalkTPoffset = new Vector3(0, 2.85f, -2f);
         TalkFPoffset = new Vector3(0, 2.85f, 2f);
+        MainFPoffset = new Vector3(0.25f, 2.85f, 1.75f);
 
         playerTr = GameObject.FindGameObjectWithTag("Player").transform;
         transform.rotation = playerTr.rotation;
@@ -69,7 +70,6 @@ public class CameraManager : MonoBehaviour
 
     void LateUpdate()
     {
-
         switch(curBlend)
         {
             case Blend.Smooth:

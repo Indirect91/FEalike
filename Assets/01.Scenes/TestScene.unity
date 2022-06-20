@@ -490,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TalkFPoffset: {x: 0, y: 0, z: 0}
   TalkTPoffset: {x: 0, y: 0, z: 0}
+  MainFPoffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1736861975
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,8 +617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 1519707415}
-  TragetSpeaker: {fileID: 403825143}
-  Myself: {fileID: 1195236153}
+  TragetSpeaker: {fileID: 1195236153}
+  Myself: {fileID: 403825143}
   phase: 0
 --- !u!4 &2121055155
 Transform:

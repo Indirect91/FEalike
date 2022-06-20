@@ -24,7 +24,7 @@ public class TestScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            cmra.SingleActorConversation(TragetSpeaker, CameraManager.Blend.Cut);
+            cmra.MainActorChoosing(CameraManager.Blend.Cut);
         }
 
         else if(Input.GetKeyDown(KeyCode.Alpha1))
