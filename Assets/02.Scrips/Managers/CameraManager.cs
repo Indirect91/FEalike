@@ -5,26 +5,26 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     
-    public enum CameraMode
+    public enum Blend
     {
-        FirstPerson, ThirdPerson, ThirdPersonSided
+        Cut, Smooth
     }
 
     Transform playerTr;
 
-
-
     Vector3 originalPos;
     Vector3 destinationPos;
+
     Quaternion originalRot;
     Quaternion destinationRot;
 
     Vector3 velocity;
-    float smoothTime = 0.5f;
+    float smoothPosTime = 1.0f;
+    float smoothRotTime = 3.0f;
 
-
+    Blend curBlend;
     public Vector3 TalkFPoffset;
-    public Vector3 TalkTPoffset = new Vector3(0, 2.85f, -2f);
+    public Vector3 TalkTPoffset;
 
 
     public void SmoothTransition()
@@ -37,7 +37,7 @@ public class CameraManager : MonoBehaviour
 
     }
 
-    public void SingleActorZoom(Transform TargetSpeaker)
+    public void SingleActorConversation(Transform TargetSpeaker)
     {
 
 
@@ -72,68 +72,23 @@ public class CameraManager : MonoBehaviour
         //transform.position = TargetSpeaker.position + FPoffset;
     }
 
-    public void DoubleActorZoom(Transform TargetSpeaker, Transform MainCharacter, CameraMode mode)
+    public void DoubleActorConversation(Transform TargetSpeaker, Transform MainCharacter, Blend blendType)
     {
-
+        curBlend = blendType;
         Vector3 middlePoint = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
-
-
-        //transform.rotation = Quaternion.Euler(TargetSpeaker.eulerAngles + new Vector3(0, -45, 0));
-        transform.position = middlePoint + new Vector3(0, 2.851f, 0f); ;
         var dist = Vector3.Distance(TargetSpeaker.position, middlePoint);
-        //transform.Translate(new Vector3(-dist/3, 0, -dist*1.8f));
-
-        destinationRot = Quaternion.Euler(TargetSpeaker.eulerAngles + new Vector3(0, -45, 0));
-        //destinationPos = middlePoint + 
-        destinationPos=MainCharacter.transform.position + MainCharacter.TransformDirection(new Vector3(-dist / 3, 2.85f, dist*0.8f));
-
-
-
-        //transform.rotation = Quaternion.Euler((TargetSpeaker.rotation.eulerAngles) + new Vector3(0, 114, 0));
-
-
-        //transform.position=TargetSpeaker.TransformPoint(new Vector3(-0.24f, 2.85f, -3.32f));
-
-
-
-
-
-        //transform.position = middlePoint;
-        //transform.LookAt(TargetSpeaker);
-        //transform.RotateAround(middlePoint, Vector3.up, -45);
-        //transform.position= TargetSpeaker.TransformDirection(new Vector3(-.25f,2.85f,-3.32f));
-
-
-
-        //transform.position = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
-        //temp = Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f);
-        //temp2 = Vector3.Cross(MainCharacter.position, TargetSpeaker.position);
-        //Debug.Log(temp);
-        //Debug.Log(temp2);
-        //transform.rotation = Quaternion.Euler(MainCharacter.rotation.eulerAngles - new Vector3(0,90.0f,0));
-
-        //Vector3 toCal = new Vector3(TargetSpeaker.position.x, 2.85f, TargetSpeaker.position.y);
-        //transform.Translate(0,2.85f, -(middlePoint.z - MainCharacter.rotation.z) *1.2f);
-        //trig = true;
-
-
-        //transform.position = TargetSpeaker.position;
-        //transform.rotation = Quaternion.Euler(new Vector3(0, -24.0f, 0));
-        //transform.rotation = Quaternion.Euler(TargetSpeaker.rotation.eulerAngles - new Vector3(0,228.0f,0));
-        //transform.Translate(TPoffset);
-        //transform.LookAt(Vector3.Lerp(TargetSpeaker.transform.position, MainCharacter.transform.position, 0.5f));
-
-
-
+        destinationRot = Quaternion.Euler(MainCharacter.eulerAngles + new Vector3(0, -45, 0));
+        destinationPos=MainCharacter.transform.position + MainCharacter.TransformDirection(new Vector3(dist*1.75f, 2.85f, -dist*0.75f));
     }
 
     void Start()
     {
+        TalkTPoffset = new Vector3(0, 2.85f, -2f);
         playerTr = GameObject.FindGameObjectWithTag("Player").transform;
         transform.rotation = playerTr.rotation;
         transform.position = playerTr.position + playerTr.TransformDirection(TalkTPoffset);
-        //originalPos = destinationPos = transform.position;
-        //originalRot = destinationRot = transform.rotation;
+        originalPos = destinationPos = transform.position;
+        originalRot = destinationRot = transform.rotation;
 
 
         //FPoffset = new Vector3(1.3f, 2.85f, 1.05f);
@@ -144,7 +99,20 @@ public class CameraManager : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-       // Vector3.SmoothDamp(transform.position, destinationPos, ref velocity, smoothTime);
-       // transform.rotation = Quaternion.Euler(Vector3.SmoothDamp(transform.rotation.eulerAngles, destinationRot.eulerAngles, ref velocity, smoothTime));
+
+        switch(curBlend)
+        {
+            case Blend.Smooth:
+                transform.position = Vector3.SmoothDamp(transform.position, destinationPos, ref velocity, smoothPosTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, destinationRot, smoothRotTime * Time.deltaTime);
+                break;
+            case Blend.Cut:
+                transform.position = destinationPos;
+                transform.rotation = destinationRot;
+                break;
+            default:
+                Debug.Assert(true, "블랜드 미구현 항목 있는지 확인요망");
+                break;
+        }
     }
 }
