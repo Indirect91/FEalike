@@ -40,10 +40,6 @@ public class CameraManager : MonoBehaviour
     public void SingleActorConversation(Transform TargetSpeaker)
     {
 
-
-
-
-
       //  transform.position = TargetSpeaker.transform.position;
       //  transform.rotation = TargetSpeaker.transform.rotation;
       //
@@ -90,13 +86,8 @@ public class CameraManager : MonoBehaviour
         originalPos = destinationPos = transform.position;
         originalRot = destinationRot = transform.rotation;
 
-
-        //FPoffset = new Vector3(1.3f, 2.85f, 1.05f);
-        ////Poffset = new Vector3(-0.233f, 2.851f, -3.308f);
-        //TPoffset = new Vector3(0, 2.851f, 0);
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
 

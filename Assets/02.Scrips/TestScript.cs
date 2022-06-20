@@ -24,23 +24,15 @@ public class TestScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-
-            Vector3 asd = new Vector3();
-            asd = cmra.transform.position - TragetSpeaker.position;
-
-            Debug.Log(asd.x);
-            Debug.Log(asd.y);
-            Debug.Log(asd.z);
-
         }
 
         else if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            cmra.SingleActorZoom(TragetSpeaker);
+            cmra.SingleActorConversation(TragetSpeaker);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            cmra.DoubleActorZoom(TragetSpeaker, Myself, CameraManager.CameraMode.ThirdPerson);
+            cmra.DoubleActorConversation(TragetSpeaker, Myself, CameraManager.Blend.Smooth);
         }
     }
 }
